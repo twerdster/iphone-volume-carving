@@ -22,6 +22,8 @@ To restore a runnable app, recover appropriately licensed tracking/meshing depen
 
 - [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#3d-volume-carving-on-iphone)
 
+- [Partial source](https://github.com/twerdster/iphone-volume-carving/tree/main/source)
+
 ## Attribution and Updates
 
 Original project by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. No explicit top-level code license was found, and no new license is assigned by this archive. Source files retain their original contents. Original authors can open an issue to contribute updates or request corrections or removal of their material.
