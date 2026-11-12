@@ -4,47 +4,46 @@
   <img src="assets/project-preview.jpg" alt="Project title slide reading 'iOS Vision Programming Project: AR assisted shape from Volumetric stereo, GIP Laboratory, Technion Haifa' over a rendered grid of white cubes" width="420">
 </p>
 
-![Platform: iOS (iPhone)](https://img.shields.io/badge/platform-iOS%20%2B%20Python%203-lightgrey)
+![Platform: iOS + Python 3](https://img.shields.io/badge/platform-iOS%20%2B%20Python%203-lightgrey)
 ![Code: C++ / Python](https://img.shields.io/badge/code-C%2B%2B%20%2F%20Python-blue)
 ![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
 
-An iPhone scanning application using Vuforia camera poses, a green base and marker, voxel carving and marching cubes to reconstruct an object's visual hull.
+This project was designed to reconstruct an object's visual hull from silhouettes and camera poses on an iPhone. The [archived project description](https://twerdster.github.io/#3d-volume-carving-on-iphone) describes a green base/marker, QCAR/Vuforia tracking, voxel carving and marching-cubes meshing. The archive contains part of its C++ geometry code and an updated Python carving component; it does not contain a complete iPhone application.
 
-Students: Sergey Kucher, Alex Povichuk.
+Students: Sergey Kucher, Alex Povichuk. Supervision: Aaron Wetzler.
 
-Supervision: Aaron Wetzler.
+*The figure is the original project title slide, unchanged. It is not a reconstruction result.*
 
-## Status
+## What is available
 
-**Partial original source recovered.** The `source/` directory contains 21 original geometry, voxel-sculpting and mesh files, restored without modification. This is not the complete iPhone application and is not a runnable release.
+The [21 original files](source/) preserve geometry, mesh and voxel-sculpting code under `Sculptor/` and a helper header under `Drop Shadows/`. Their contents are unchanged. The Objective-C application shell and tracking integration are absent.
 
-## Original code
+The [updated Python component](updated/) takes a bit-packed voxel grid, 3-by-4 camera projection matrices and byte-valued silhouette maps. It implements the original accurate/fast carving loops and modifies the supplied silhouette masks in place, then exports occupied voxels as an ASCII PLY point cloud. An SVG and [notebook](updated/notebooks/voxel_carving_demo.ipynb) display the synthetic three-silhouette example. Point-cloud export and visualization are new; marching-cubes mesh extraction is not implemented.
 
-The 21 recovered files are in [`source/`](source/): voxel-sculpting, geometry and mesh code in [`source/Sculptor/`](source/Sculptor/) and one helper header in [`source/Drop Shadows/`](<source/Drop Shadows/>). The Objective-C app shell and tracking integration are not part of this snapshot.
+## Run the updated component
 
-## Running
+Python 3.10+ is required; the port uses the standard library. The voxel-grid size must be a multiple of eight from 8 to 128. Run from a checkout:
 
-There is no standalone build command for this partial source snapshot. The original app project targets iOS 4.2, uses Objective-C/Objective-C++, OpenGL ES and the historical Qualcomm QCAR/Vuforia tracking SDK, with UIKit, Foundation, QuartzCore, AVFoundation, CoreMedia and CoreVideo. It also requires its original camera/tracking configuration and resources.
+```sh
+cd updated
+python3 demo.py --size 24 --radius 8 --out build
+python3 -m unittest discover -s tests -v
+```
 
-The complete historical archive contains SDK source marked Qualcomm Confidential and Proprietary. Those files, SDK libraries, third-party UI files and generated project state have not been republished. The mesh source also references `MarchingCubes.h`, whose redistribution provenance has not yet been established; that dependency is intentionally absent pending review.
+The demo writes `build/synthetic-hull.ply` and `build/synthetic-hull.svg` and prints occupied-voxel counts after each view. The [component guide](updated/README.md) covers notebook/Colab setup, grid restrictions, projection conventions and optional C++ comparison.
 
-To restore a runnable app, recover appropriately licensed tracking/meshing dependencies, then reconstruct and modernize the Xcode integration. No replacement dependencies or successful build are claimed here. Compilation and device behavior have not been tested on the recovery machine.
+## Validation and limitations
 
-## Updated code (2026)
+The [2026-11-12 record](updated/VALIDATION.json) reports 16 component unit tests and six notebook code cells executed on macOS 15.1.1 arm64 with Python 3.14.4 and Apple clang 16. The tests cover analytic silhouette intersection, occupancy packing, projections, monotonicity, exports and original vector-cache regressions. Three compiler-dependent tests are included in that recorded 16-test run and passed rather than skipped. They compare actual original C++ carving code with the Python port on bounded synthetic inputs; occupancy bits and mutated masks match exactly for those cases. These tests skip when neither clang++ nor g++ is available.
 
-The separately maintained [`updated/`](updated/) directory adds a runnable Python voxel-carving core. The original source and student attribution remain preserved above. [Open the notebook](updated/notebooks/voxel_carving_demo.ipynb) to explore the synthetic example; it is distinct from the historical application and original results.
+The harness uses a new declaration-only `MarchingCubes.h` stub written for comparison; it is not the absent original header. It provides no `Polygonise` implementation and does not validate meshing. Float32 projection arithmetic and several historical vector-cache quirks are retained; undefined/nonfinite projections receive explicit new handling. These choices and their limits are described in the component guide.
 
-On macOS 15.1.1 with Python 3.14.4, **16 component tests pass**, and all 6 notebook code cells execute in an isolated real Jupyter kernel. Accurate and fast occupancy bits and mutated masks match the compiled original C++ on bounded synthetic cases. Analytic silhouette intersection, monotonicity, exports and old vector-cache regressions are tested. A declaration-only compatibility header allows carving compilation; missing marching-cubes meshing is not implemented. Linux and the complete historical app have not been validated. See the [updated setup and limitations](updated/README.md).
+The complete app requires its historical iOS integration, OpenGL ES, compatible QCAR/Vuforia dependencies and camera/tracking resources. Proprietary SDK files and third-party UI material were excluded, and `MarchingCubes.h` is absent pending provenance review. No complete app build, device run, reconstruction benchmark or Linux execution is recorded. All updated example inputs are synthetic, with no recovered captures.
+
+## Original code and updated work
+
+The Python translation was drafted with Claude Code and completed/reviewed/tested with Codex for Aaron Wetzler in 2026. The original files, student credits and third-party notices are preserved. No explicit top-level code license was found, and no blanket license is added for original or derived work. Authors can open an issue to contribute updates, correct attribution or request removal.
 
 ## Links
 
 - [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#3d-volume-carving-on-iphone)
-
-- [Partial source](https://github.com/twerdster/iphone-volume-carving/tree/main/source)
-
-## Attribution and Updates
-
-Original project by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. No explicit top-level code license was found, and no new license is assigned by this archive. Source files retain their original contents. Original authors can open an issue to contribute updates or request corrections or removal of their material.
-
-Figure provenance: `assets/project-preview.jpg` is the original student-project title slide from the archived project page on Aaron Wetzler's website, copied without modification. It is a presentation slide, not a reconstruction result.
-
