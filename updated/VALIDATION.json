@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12",
+  "platform": "macOS 15.1.1 arm64",
+  "python": "3.14.4",
+  "component_tests_passed": 16,
+  "real_jupyter_code_cells_passed": 6,
+  "notebook": "updated/notebooks/voxel_carving_demo.ipynb",
+  "original_source_changed": false,
+  "full_historical_app_validated": false,
+  "linux_validated": false,
+  "evidence": "Accurate and fast occupancy bits and mutated masks match the compiled original C++ on bounded synthetic cases. Analytic silhouette intersection, monotonicity, exports and old vector-cache regressions are tested. A declaration-only compatibility header allows carving compilation; missing marching-cubes meshing is not implemented.",
+  "authorship_note": "Claude Code drafted HeartBeat and Volume Carving core translations; Codex completed/reviewed/tested the changes after Claude usage limit. CutOut updated component was written by Codex; original local formula attribution remains unverified."
+}

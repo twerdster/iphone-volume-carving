@@ -4,8 +4,8 @@
   <img src="assets/project-preview.jpg" alt="Project title slide reading 'iOS Vision Programming Project: AR assisted shape from Volumetric stereo, GIP Laboratory, Technion Haifa' over a rendered grid of white cubes" width="420">
 </p>
 
-![Platform: iOS (iPhone)](https://img.shields.io/badge/platform-iOS%20%28iPhone%29-lightgrey)
-![Code: C++ (21 files)](https://img.shields.io/badge/code-C%2B%2B%20%2821%20files%29-blue)
+![Platform: iOS (iPhone)](https://img.shields.io/badge/platform-iOS%20%2B%20Python%203-lightgrey)
+![Code: C++ / Python](https://img.shields.io/badge/code-C%2B%2B%20%2F%20Python-blue)
 ![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
 
 An iPhone scanning application using Vuforia camera poses, a green base and marker, voxel carving and marching cubes to reconstruct an object's visual hull.
@@ -29,6 +29,12 @@ There is no standalone build command for this partial source snapshot. The origi
 The complete historical archive contains SDK source marked Qualcomm Confidential and Proprietary. Those files, SDK libraries, third-party UI files and generated project state have not been republished. The mesh source also references `MarchingCubes.h`, whose redistribution provenance has not yet been established; that dependency is intentionally absent pending review.
 
 To restore a runnable app, recover appropriately licensed tracking/meshing dependencies, then reconstruct and modernize the Xcode integration. No replacement dependencies or successful build are claimed here. Compilation and device behavior have not been tested on the recovery machine.
+
+## Updated code (2026)
+
+The separately maintained [`updated/`](updated/) directory adds a runnable Python voxel-carving core. The original source and student attribution remain preserved above. [Open the notebook](updated/notebooks/voxel_carving_demo.ipynb) to explore the synthetic example; it is distinct from the historical application and original results.
+
+On macOS 15.1.1 with Python 3.14.4, **16 component tests pass**, and all 6 notebook code cells execute in an isolated real Jupyter kernel. Accurate and fast occupancy bits and mutated masks match the compiled original C++ on bounded synthetic cases. Analytic silhouette intersection, monotonicity, exports and old vector-cache regressions are tested. A declaration-only compatibility header allows carving compilation; missing marching-cubes meshing is not implemented. Linux and the complete historical app have not been validated. See the [updated setup and limitations](updated/README.md).
 
 ## Links
 
