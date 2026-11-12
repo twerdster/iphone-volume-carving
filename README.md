@@ -8,11 +8,15 @@ Supervision: Aaron Wetzler.
 
 ## Status
 
-**Coming soon.** This repository is being prepared as a historical student-project archive. Original source code, project documents and build instructions will be added as they are recovered and reviewed. It is not yet a runnable release.
+**Partial original source recovered.** The `source/` directory contains 21 original geometry, voxel-sculpting and mesh files, restored without modification. This is not the complete iPhone application and is not a runnable release.
 
 ## Running
 
-No runnable source has been published in this repository yet. Platform requirements and setup instructions will be recorded from the original project files rather than guessed.
+There is no standalone build command for this partial source snapshot. The original app project targets iOS 4.2, uses Objective-C/Objective-C++, OpenGL ES and the historical Qualcomm QCAR/Vuforia tracking SDK, with UIKit, Foundation, QuartzCore, AVFoundation, CoreMedia and CoreVideo. It also requires its original camera/tracking configuration and resources.
+
+The complete historical archive contains SDK source marked Qualcomm Confidential and Proprietary. Those files, SDK libraries, third-party UI files and generated project state have not been republished. The mesh source also references `MarchingCubes.h`, whose redistribution provenance has not yet been established; that dependency is intentionally absent pending review.
+
+To restore a runnable app, recover appropriately licensed tracking/meshing dependencies, then reconstruct and modernize the Xcode integration. No replacement dependencies or successful build are claimed here. Compilation and device behavior have not been tested on the recovery machine.
 
 ## Links
 
@@ -20,5 +24,5 @@ No runnable source has been published in this repository yet. Platform requireme
 
 ## Attribution and Updates
 
-Original student and third-party attribution will be retained. No license for unrecovered source code is implied by this README. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+Original project by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. No explicit top-level code license was found, and no new license is assigned by this archive. Source files retain their original contents. Original authors can open an issue to contribute updates or request corrections or removal of their material.
 
