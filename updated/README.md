@@ -1,37 +1,38 @@
-# Voxel-carving component (updated Python, 2026)
+# Silhouette volume carving — updated 2026
 
-This standard-library Python translation implements the recovered **voxel-carving component** by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. The original 21 source files in `../source/` remain unchanged. The new implementation is maintained by Aaron Wetzler.
+![Final observed boundary samples rendered from the 36 calibrated viewpoints](assets/dinosaur-carving.gif)
 
-## Inputs, outputs and changes
+Silhouettes and calibrated cameras from a real dinosaur sequence drive the recovered C++ carver. Photographs appear only in the rendering. The display excludes voxels whose projections never fall inside any input image; the unfiltered native output is also retained. [MP4](assets/dinosaur-carving.mp4) · [Full-size image](assets/dinosaur-carving.png) · [Point viewer — download and open locally](assets/dinosaur-viewer.html).
 
-`SculptData` takes a row-major 3-by-4 projection matrix, a byte-valued silhouette map and its pixel dimensions. Zero/BLUE map values are background; other values are foreground. `Sculptor` removes grid voxels projecting to background and records visited pixels by mutating the map.
+This component runs Sergey Kucher and Alex Povichuk’s `Sculptor` voxel-carving code, supervised by Aaron Wetzler. A voxel is a sample in a regular 3D grid. Each supplied silhouette and 3×4 camera matrix removes samples that project into background. The 21 original files under `../source/` are unchanged.
 
-The port preserves the bit-packed occupancy grid, float32 projection arithmetic, accurate and fast silhouette-carving loops and bounding-box outline from `Sculptor.h`/`MeshMargins.h`. The historical `Vector3DEx` cache quirks are deliberately reproduced for comparison, including zero cached lengths after addition/cross product. They are not suitable general-purpose vector semantics. New geometry should use a fresh Euclidean norm.
+## What runs
 
-The grid size must be a multiple of eight from 8 to 128, reflecting the original index types. Projection/coordinate units come from the supplied matrix, scale and translation; no camera calibration or physical unit is provided by the demo.
+The original C++ carving core compiles on macOS and Linux through a small headless harness. No numerical carving fix was needed for the tested path. Build adaptations provide C++14, `nil=nullptr`, disabled floating-point contraction and a declaration-only replacement for the missing `MarchingCubes.h`. That placeholder does not implement mesh extraction.
 
-New code adds explicit handling of undefined zero/nonfinite projections (outside the map), grid size limits, a synthetic orthographic-silhouette example, an SVG point-cloud view and ASCII PLY export. None of these additions is an original project result. **Marching-cubes mesh extraction, the iPhone app, camera capture, QCAR/Vuforia and OpenGL rendering are not ported.**
+The existing standard-library Python translation remains available for small experiments and the notebook. New replay tooling reads real masks and calibrated cameras, exports per-view native occupancy, checks it independently and writes PLY boundary samples. A separate output filter excludes never-observed voxels; it does not change the original carver. No camera app, QCAR/Vuforia integration, texture recovery or triangle meshing is supplied.
 
 ## Run
 
-From this `updated/` directory, with Python 3.10 or newer:
+From this directory, the Python core targets 3.10+ (tested on 3.10.12/Linux and 3.14.4/Mac). These commands run tests and a synthetic demo:
 
 ```sh
 python3 -m unittest discover -s tests -v
 python3 demo.py --size 24 --radius 8 --out build
-python3 harness/compare_with_original.py
 ```
 
-The [2026-11-12 validation record](VALIDATION.json) reports 16 component unit tests and six real notebook code cells passed. The tests check an analytic three-disk intersection, projection, monotonicity, order invariance, idempotence, occupancy packing, exports, original vector regressions and comparisons with the actual compiled C++ carving core. All three compiler-dependent tests passed as part of the recorded 16-test run. They skip if neither clang++ nor g++ exists. No third-party Python packages are needed by the port. Tests run on macOS 15.1.1 arm64, Python 3.14.4 and Apple clang 16 (Xcode 16.1); Linux has not been tested.
+The three compiled-original tests require clang++ or g++ and skip when neither exists. Native comparison: `python3 harness/compare_with_original.py`. See [the build/replay guide](RUNNING_2026.md) for original-source compilation, the real dinosaur sequence, sanitizers and the [existing notebook](notebooks/voxel_carving_demo.ipynb). Optional real-data tools use NumPy/Pillow; the small Python core has no dependencies.
 
-The reference harness compiles original source without edits, using C++14, `-Dnil=nullptr`, disabled FP contraction and a new declaration-only `harness/compat/MarchingCubes.h` stub written for the harness, not the missing original header. The missing `Polygonise` function has no implementation; trying to use mesh extraction fails to link. Exact occupancy bits and mutated silhouette masks match the original on the bounded synthetic comparison cases. This is component validation, not a full app build.
+## Verified output
 
-## Notebook and interactivity
+On 2026-11-14, all 16 component tests passed on both macOS and Linux, including the three compiled-original comparisons. They cover bounded synthetic occupancy/mask parity, projection, grid packing, order/idempotence checks, exports and retained vector quirks.
 
-[Open the notebook](notebooks/voxel_carving_demo.ipynb) or [open in Colab](https://colab.research.google.com/github/twerdster/iphone-volume-carving/blob/main/updated/notebooks/voxel_carving_demo.ipynb). It uses a local checkout when available; otherwise it downloads the small updated modules from this repository's `main` branch at runtime, without a commit pin. Change the grid/radius, rerun cells, compare carving modes and export a point cloud. The notebook is committed without outputs. Its six code cells were executed in an isolated real Jupyter kernel on 2026-11-12.
+The unchanged C++ `ACCURATE` path replayed all 36 dinosaur silhouettes at 128³ resolution, using Freehand’s rounded `demoP` table rather than the original Oxford calibration files. All 2,097,152 occupancy values matched an independent NumPy projection calculation after every view. The raw result has 27,310 occupied voxels; 5,830 never project inside any image. Excluding those from the separately labeled observed export leaves 21,480 voxels and 6,415 boundary samples (recomputed after filtering, including newly exposed boundaries). Both raw and observed PLY files are included. [Metrics and logs](validation/2026-11-14/).
 
-A future browser or Space interface could accept silhouette edits and display the resulting point cloud. That UI has not been built. The existing notebook displays an isometric projection; it does not claim an interactive 3D viewer.
+The full native replay exited 0 with no AddressSanitizer/UndefinedBehaviorSanitizer reports on both systems; only executed paths were checked. Linux/GCC ASan output was byte-identical to macOS/clang strict output, including mutated masks and final occupancy. Per-view snapshots were checked against the separate float32 reference on macOS. These checks show agreement with the reference on Mac and final-output consistency across the two builds; they do not measure geometric accuracy.
 
-## Attribution and terms
+## Limits and credits
 
-Claude Code drafted the translation; Codex completed/reviewed/tested it for Aaron Wetzler in 2026. Original source/student attribution and existing terms remain in place. No blanket license is added for original code, the derivative translation or third-party dependencies. The new synthetic scene and exports are explicitly updated 2026 demonstration material, not recovered captures.
+The recovered app is incomplete: its Objective-C shell, SDK integration and MarchingCubes implementation are absent. Direct compilation first fails at the missing header. The original out-of-map rule can retain unobserved cells; raw output remains available rather than being silently cleaned. A visual hull cannot recover concavities absent from silhouettes. No held-out-view, physical-capture or reference-surface evaluation was performed.
+
+The input sequence is reused from the separate recovered Freehand project, not recovered captures from this app. Credit: Wolfgang Niem, University of Hannover, via [Oxford VGG’s multi-view data](https://www.robots.ox.ac.uk/~vgg/data/mview/). Existing terms and notices remain; no new dataset or code license is inferred. The earlier Python translation was drafted with Claude Code and completed/tested by Codex. Aaron Wetzler maintains the separately labeled 2026 tooling; original author attribution is preserved.

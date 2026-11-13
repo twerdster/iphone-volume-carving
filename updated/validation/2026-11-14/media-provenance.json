@@ -1,0 +1,35 @@
+{
+  "input": "36 actual dinosaur silhouettes and calibrated camera table; photographs only used in render; all image hashes in dinosaur-metrics.json",
+  "animation": "36 final observed-output views projected using supplied cameras,6s MP4/6fps; GIF4fps; no carving-progress or execution-speed claim",
+  "display_filter": "exclude never-in-image voxels; raw boundary samples retained separately",
+  "assets": {
+    "dinosaur-calibration.json": {
+      "bytes": 7489,
+      "sha256": "4633c518f33439015bf350ac3669a21820b5c3fc0754079b16ac12c7130d7531"
+    },
+    "dinosaur-voxels-raw.ply": {
+      "bytes": 337089,
+      "sha256": "7847a501454fb5e0d88527a5323f59f1ba682df21a2ce54bff40bb6786b930c5"
+    },
+    "dinosaur-carving.png": {
+      "bytes": 251796,
+      "sha256": "f5c03243671e52a05acadf8344e51e5fcf077d5451c1ce27767b3745ff929c45"
+    },
+    "dinosaur-viewer.html": {
+      "bytes": 408425,
+      "sha256": "9089b50dc053ed229d35a11a6ca7836b1e7fe4695601b2315af198e42845a001"
+    },
+    "dinosaur-carving.mp4": {
+      "bytes": 429710,
+      "sha256": "0c3019419ba9738307138d23563a59438da06a954ccb2181933ea2e07b3a0711"
+    },
+    "dinosaur-voxels-observed.ply": {
+      "bytes": 242618,
+      "sha256": "b6a3c6f44bbab5b9cd2497569b9a5efce423d0444635d96efce1c287cbc7afba"
+    },
+    "dinosaur-carving.gif": {
+      "bytes": 826007,
+      "sha256": "a36a283ab163b179438f44ccbf7ea361d45b15049ca4eded0b98e4e7d4030f89"
+    }
+  }
+}

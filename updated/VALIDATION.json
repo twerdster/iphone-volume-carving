@@ -1,13 +1,52 @@
 {
-  "date": "2026-11-12",
-  "platform": "macOS 15.1.1 arm64",
-  "python": "3.14.4",
-  "component_tests_passed": 16,
-  "real_jupyter_code_cells_passed": 6,
-  "notebook": "updated/notebooks/voxel_carving_demo.ipynb",
+  "date": "2026-11-14",
+  "component_tests": {
+    "mac_passed": 16,
+    "linux_passed": 16,
+    "skipped": 0
+  },
   "original_source_changed": false,
+  "main_reference_readme_changed": false,
+  "original_carving_algorithm_modified": false,
   "full_historical_app_validated": false,
-  "linux_validated": false,
-  "evidence": "Accurate and fast occupancy bits and mutated masks match the compiled original C++ on bounded synthetic cases. Analytic silhouette intersection, monotonicity, exports and old vector-cache regressions are tested. A declaration-only compatibility header allows carving compilation; missing marching-cubes meshing is not implemented.",
-  "authorship_note": "Claude Code drafted HeartBeat and Volume Carving core translations; Codex completed/reviewed/tested the changes after Claude usage limit. CutOut updated component was written by Codex; original local formula attribution remains unverified."
+  "mesh_extraction_validated": false,
+  "native_asan_ubsan": {
+    "mac": "full 36-view 128\u00b3 replay, exit 0, no reports; output identical to Mac strict native-output.txt",
+    "linux": "full 36-view 128\u00b3 replay, exit 0, no reports; output identical to Mac strict native-output.txt"
+  },
+  "real_replay_metrics": "validation/2026-11-14/dinosaur-metrics.json",
+  "new_output_filter": "exclude never-observed voxels only in separately labeled observed export; raw native occupancy retained",
+  "previous_validation": {
+    "date": "2026-11-12",
+    "platform": "macOS 15.1.1 arm64",
+    "python": "3.14.4",
+    "component_tests_passed": 16,
+    "real_jupyter_code_cells_passed": 6,
+    "notebook": "updated/notebooks/voxel_carving_demo.ipynb",
+    "original_source_changed": false,
+    "full_historical_app_validated": false,
+    "linux_validated": false,
+    "evidence": "Accurate and fast occupancy bits and mutated masks match the compiled original C++ on bounded synthetic cases. Analytic silhouette intersection, monotonicity, exports and old vector-cache regressions are tested. A declaration-only compatibility header allows carving compilation; missing marching-cubes meshing is not implemented.",
+    "authorship_note": "Claude Code drafted this component translation; Codex completed, reviewed and tested it."
+  },
+  "environments": {
+    "mac": {
+      "platform": "macOS-15.1.1-arm64-arm-64bit-Mach-O",
+      "python": "3.14.4",
+      "numpy": "2.5.4",
+      "pillow": "13.0.0",
+      "compiler": "Apple clang version 16.0.0 (clang-1600.0.26.4)"
+    },
+    "linux": {
+      "os": "Ubuntu 22.04.5 x86_64",
+      "python": "3.10.12",
+      "compiler": "GCC 11.4.0"
+    }
+  },
+  "claude_review": {
+    "date": "2026-11-14",
+    "rounds_completed": 2,
+    "scope": "tools-disabled editorial/factual review against supplied code and evidence; no execution by reviewer",
+    "feedback_applied": "qualification of platform/parity/sanitizer/metric scopes, input/output provenance, gates and author attribution; factual suggestions checked against code and actual records"
+  }
 }

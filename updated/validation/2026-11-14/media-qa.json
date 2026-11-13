@@ -1,0 +1,15 @@
+{
+  "dinosaur-carving.mp4": {
+    "bytes": 429710,
+    "fully_decoded": true
+  },
+  "dinosaur-carving.gif": {
+    "bytes": 826007,
+    "frames": 24,
+    "duration_ms": 6000,
+    "size": [
+      800,
+      480
+    ]
+  }
+}

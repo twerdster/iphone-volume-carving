@@ -1,0 +1,21 @@
+test_original_accurate_bits_and_mutated_masks (test_carving.CompiledOriginalTests) ... ok
+test_original_extreme_silhouettes (test_carving.CompiledOriginalTests) ... ok
+test_original_fast_bits_and_mutated_masks (test_carving.CompiledOriginalTests) ... ok
+test_disk_intersection_matches_analytic_voxel_set (test_carving.GeometryTests) ... ok
+test_fast_matches_accurate_on_convex_synthetic_views (test_carving.GeometryTests) ... ok
+test_foreground_and_background_extremes (test_carving.GeometryTests) ... ok
+test_outline_has_twelve_edges (test_carving.GeometryTests) ... ok
+test_point_cloud_has_correct_header_and_rows (test_carving.GeometryTests) ... ok
+test_project_hand_computed (test_carving.GeometryTests) ... ok
+test_repeated_view_is_idempotent (test_carving.GeometryTests) ... ok
+test_reset_and_bit_independence (test_carving.GeometryTests) ... ok
+test_size_limits_and_map_shape (test_carving.GeometryTests) ... ok
+test_view_order_invariance_of_accurate_carving (test_carving.GeometryTests) ... ok
+test_zero_projection_denominator_is_outside (test_carving.GeometryTests) ... ok
+test_normalize_preserves_original_receiver_mutation (test_carving.OriginalVectorQuirks) ... ok
+test_stale_cached_length_regression (test_carving.OriginalVectorQuirks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.107s
+
+OK

@@ -1,33 +1,27 @@
 # iphone-volume-carving: maintenance context
 
-Read this file first, then SKILL.md and README.md. This context describes the repository as of 2026-11-13.
+Read SUMMARY.md, then SKILL.md, the reference README and updated documentation. Current results: 2026-11-14.
 
-## Purpose and current source
+## Purpose and preservation
 
-Historical silhouette/camera-pose visual-hull reconstruction; updated Python port implements the voxel-carving core and point-cloud export.
+Silhouette visual-hull carving by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. All 21 recovered source files remain unchanged. Preserve their notices/credits. The root README is the project reference; new work belongs under updated/.
 
-21 original source files remain unchanged. Objective-C shell, QCAR/Vuforia integration and MarchingCubes.h are absent. The updated port takes 3x4 projection matrices and byte silhouettes, maintains occupancy bits and mutates visited mask pixels.
+## Current executable work
 
-## Use and validation
+The unmodified C++ carver compiles on Mac/Linux through a declaration-only compatibility header for the missing MarchingCubes.h. No numerical carving fix was needed for the tested ACCURATE path. New harness code adds 128³ grids and per-view bit snapshots. New tooling replays 36 real masks with supplied calibrated cameras from the separate Freehand archive, checks occupancy independently and exports PLY boundary samples. Photographs are used only to render the demonstration.
 
-From updated/: python3 demo.py --size 24 --radius 8 --out build; python3 -m unittest discover -s tests -v. See updated/README.md for notebook setup, restrictions and comparison.
+All 16 component tests passed on both platforms without skips, including all three compiled-original comparisons. Full 128³, 36-view native replay exited 0 with no ASan/UBSan reports on both; Linux ASan output text, including mutated-mask hex and final occupancy, is byte-identical to Mac strict output. On Mac, the separate float32 reference agrees at all 2,097,152 voxels after every view. It implements the same rules; this is consistency evidence, not geometric accuracy.
 
-updated/VALIDATION.json records 16 component tests and six real notebook code cells passed on 2026-11-12, macOS 15.1.1 arm64 / Python 3.14.4. Bounded synthetic occupancy/mask comparisons match compiled original C++ carving. The declaration-only MarchingCubes compatibility stub is newly written for the harness, not the missing original header, and does not implement or validate mesh extraction. The saved maintenance log confirms all three compiled-original tests passed among the 16, without skips.
+Raw occupancy has 27,310 voxels, including 5,830 that never project inside any image. A separately labeled output filter excludes those, leaving 21,480 voxels and 6,415 recomputed boundary samples. Both raw and observed boundary exports are retained; filtering can expose new boundary samples. The term observed means in-image projection, not occlusion reasoning. Results are specific to Freehand's rounded demoP table and masks; the masks' original creator is not established.
 
-No full iOS build/device run, recovered captures, reconstruction benchmark or Linux validation. Demo inputs are synthetic. Grid size is a multiple of eight in [8,128]. Historical vector-cache quirks are retained; point-cloud PLY/SVG output and undefined-projection handling are new.
+Direct compilation fails at missing MarchingCubes.h. The harness placeholder does not implement meshing. No full iOS shell, camera/QCAR/Vuforia, triangle extraction or texture recovery is provided. Historical projection/index/vector-cache quirks remain documented. No held-out-view, physical-capture or reference-surface evaluation was performed.
 
-## Documentation maintenance
+## Workflow and evidence
 
-The 2026-11-12 documentation revision organizes the README around implementation, available source, setup, recorded checks and limits. It preserves historical visuals and links, with captions separating historical results from updated examples. No runnable code, source provenance, pinned revisions, licenses or validation results changed in this revision. Recorded earlier tests were not rerun for the prose-only edits.
+See updated/README.md and updated/RUNNING_2026.md for commands and dependencies. updated/VALIDATION.json retains current checks and the earlier notebook record; updated/validation/2026-11-14/ contains environment details, metrics, hashes and logs. Six notebook code cells executed in Jupyter on 2026-11-12 were not rerun here.
 
-Preserve original source and authorship. New ports belong under updated/ and require their own scope/validation. Do not infer a blanket license from recovery. Review this file and SKILL.md before every commit and synchronize changes to workflow, commands, validation or status. Check relative links and figure rendering; never describe inventory counts or component tests as full-application validation.
+Media, PLY samples and a local interactive viewer live under updated/assets/. Preserve GIF <2,000,000 bytes and MP4 <10,000,000 bytes; playback rate is not throughput. Bulk data/intermediates: /Volumes/AgentSSD/agent-work/project-revivals-2026-11-14/volume-carving. Recheck SSD mount/space/write access before large writes; keep builds/environments on native filesystems. Private host/build paths and full logs are recorded in the task handoff.
 
-Two actual Claude editorial review rounds on 2026-11-12 covered the README and related changed documentation, including context files, component guides and applicable algorithm/build notes or schematic text. Useful qualifications were checked against source, preserved project records and saved validation logs, then applied. Editorial review adds no runtime coverage.
+On 2026-11-13 Alex Povichuk gave Aaron permission to use the project code. This records Alex's response only; preserve correspondence privately, original attribution and existing terms. No repository-wide license is added. Dinosaur data is credited to Wolfgang Niem, Hannover, via Oxford VGG and the Freehand archive.
 
-## Author correspondence recorded on 2026-11-13
-
-On 2026-11-13, Alex Povichuk gave Aaron Wetzler permission to use the project code. This records Alex Povichuk's response only; no repository-wide license is added. The recovered original and separately labeled Python component retain their existing attribution and notices.
-
-This update changes documentation only. Source files, pinned revisions, assets, licenses and recorded validation results are unchanged. Private correspondence remains outside the repository. No new build, runtime or numerical validation was performed for this update.
-
-Two actual Claude editorial rounds on 2026-11-13 reviewed these author-correspondence notes and the related documentation/context changes. Minor factual and wording corrections were applied against the correspondence and existing repository records. This review and documentation update add no runtime validation.
+Earlier documentation received Claude reviews on 2026-11-12 and 2026-11-13. Two tools-disabled Claude editorial reviews also completed on 2026-11-14; useful corrections were checked against code/results and applied. Before every commit reread/synchronize SUMMARY.md and SKILL.md; verify all source hashes and root README identity, changed links/media and diff scope. No package bundles these docs.

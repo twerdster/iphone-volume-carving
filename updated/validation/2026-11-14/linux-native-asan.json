@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "sanitizers": "AddressSanitizer and UndefinedBehaviorSanitizer",
+  "exact_output_match_to_mac_strict": true,
+  "views": 36,
+  "grid_size": 128,
+  "date": "2026-11-14",
+  "compiler": "GCC 11.4.0",
+  "compared_to": "mac strict native-output.txt (-ffp-contract=off)",
+  "compared_artifact_contents": "36 per-view counts and mutated mask hex lines, final occupancy hex and margins; not per-view snapshots",
+  "asan_output_sha256": "5220ec2537332a9db112b762d0cebe6b75d7ed79794b1b336d74ddd727888051",
+  "sanitizer_reports": 0,
+  "mac_strict_output_sha256": "5220ec2537332a9db112b762d0cebe6b75d7ed79794b1b336d74ddd727888051"
+}

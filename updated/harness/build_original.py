@@ -25,7 +25,7 @@ SCULPTOR = SRC / "Sculptor"
 DROP = SRC / "Drop Shadows"
 BUILD = UPDATED / "build"
 
-FLAGS = {"strict": ["-O2", "-ffp-contract=off"], "default": ["-O2"]}
+FLAGS = {"strict": ["-O2", "-ffp-contract=off"], "default": ["-O2"], "asan": ["-O1", "-g", "-fsanitize=address,undefined", "-fno-omit-frame-pointer", "-ffp-contract=off"]}
 
 
 def build(variant: str = "strict", verbose: bool = False) -> dict:

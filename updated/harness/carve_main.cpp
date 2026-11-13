@@ -19,6 +19,10 @@
 #include <iomanip>
 #include <cctype>
 
+// Optional third argument: an existing directory for exact per-view occupancy
+// snapshots. This affects harness output only, never the recovered algorithm.
+static std::string snapshotDirectory;
+
 template <int Size>
 struct Probe : public Sculptor<Size> {
     Probe(float s, const Vector3D &t) : Sculptor<Size>(s, t) {}
@@ -80,6 +84,14 @@ static int run(std::istream &in, FILE *out, float scale, float tx, float ty, flo
         for (size_t i = 0; i < bytes.size(); i++) d.map[i] = bytes[i];
         s->Sculp(&d, mode == 1 ? FAST : ACCURATE);
         fprintf(out, "view %d on=%d\n", v, s->countOn());
+        if (!snapshotDirectory.empty()) {
+            char name[32];
+            snprintf(name, sizeof name, "/view-%02d.hex", v+1);
+            FILE *snapshot = fopen((snapshotDirectory + name).c_str(), "w");
+            if (!snapshot) return 5;
+            s->dumpBits(snapshot);
+            fclose(snapshot);
+        }
         for (int i = 0; i < sx * sy; i++) fprintf(out, "%02x", d.map[i]);
         fprintf(out, "\n");
         d.Clear();
@@ -92,6 +104,7 @@ static int run(std::istream &in, FILE *out, float scale, float tx, float ty, flo
 
 int main(int argc, char **argv) {
     if (argc < 3) { fprintf(stderr, "usage: %s IN OUT\n", argv[0]); return 1; }
+    if (argc >= 4) snapshotDirectory = argv[3];
     std::ifstream in(argv[1]);
     FILE *out = fopen(argv[2], "w");
     if (!in || !out) return 2;
@@ -105,6 +118,7 @@ int main(int argc, char **argv) {
         case 24: rc = run<24>(in, out, scale, tx, ty, tz, nViews); break;
         case 32: rc = run<32>(in, out, scale, tx, ty, tz, nViews); break;
         case 64: rc = run<64>(in, out, scale, tx, ty, tz, nViews); break;
+        case 128: rc = run<128>(in, out, scale, tx, ty, tz, nViews); break;
         default: fprintf(stderr, "unsupported size %d\n", size); rc = 4;
     }
     fclose(out);
