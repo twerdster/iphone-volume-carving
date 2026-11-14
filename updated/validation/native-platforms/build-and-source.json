@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-14",
+  "source_files": [
+    {
+      "path": "updated/native/CMakeLists.txt",
+      "bytes": 1664,
+      "sha256": "2447c64bf1cef8e5a3a9703a97279712ecb8151dea3758516640af0b28fdf05f"
+    },
+    {
+      "path": "updated/native/regression.cpp",
+      "bytes": 2647,
+      "sha256": "6a5900664bb1d7d599570e25b5bf344ed1815da162c425e03961e252b0a23fc0"
+    },
+    {
+      "path": "updated/native/replay.cpp",
+      "bytes": 6177,
+      "sha256": "48fcbc0f7f5b44ee9b656d544bfaba844539b32861be52f97fb6654e8555018f"
+    },
+    {
+      "path": "updated/native/volume_carving.cpp",
+      "bytes": 5254,
+      "sha256": "91c564ef098f847470131031a9233adb3516ca592f53df5323eaa82242372a74"
+    },
+    {
+      "path": "updated/native/volume_carving.h",
+      "bytes": 2158,
+      "sha256": "34dd3f5e975c7fafe4a85369d3f4387944ac1bfb3b2235c416d88115c3787328"
+    },
+    {
+      "path": "updated/desktop/index.html",
+      "bytes": 9029,
+      "sha256": "8e69a82df251c4b16ed03e295d290dc2cae540ea8cebccca86e674144832e30b"
+    },
+    {
+      "path": "updated/desktop/server.py",
+      "bytes": 5375,
+      "sha256": "af4abcbeb33e5a0c9ad63348d7edad9776277858b979369236d08f96b7aa0028"
+    },
+    {
+      "path": "updated/ios/App/DisplayColors.h",
+      "bytes": 416,
+      "sha256": "172eee689e6c7ac08524a2db58450aa6ee2db374cc73e163185d85eb506b3378"
+    },
+    {
+      "path": "updated/ios/App/NativeController.mm",
+      "bytes": 17033,
+      "sha256": "e7b6b47fb95e4d83050017ca0f44d3b537431b5896adb5c7cb428fcfaf09fca4"
+    },
+    {
+      "path": "updated/ios/generate_project.py",
+      "bytes": 7255,
+      "sha256": "fe61b5a2d081701d94a97a45f368c4f7bb3f466b49f4fd478b461887e2a3531e"
+    },
+    {
+      "path": "updated/ios/tests/display_colors.cpp",
+      "bytes": 1364,
+      "sha256": "0ea22781f4297d42e0b58f4e3663d0a4d3aea862b85bd0e0d18d391dfd646348"
+    }
+  ],
+  "macos": {
+    "native_CMake_Release_build": "passed",
+    "native_replay_36_views": "passed; see macos-result.json",
+    "compiler": "Apple clang 16.0.0",
+    "opencv": "4.12.0 core (Freehand only)"
+  },
+  "linux": {
+    "native_CMake_Release_build": "passed",
+    "native_replay_36_views": "passed; see linux-result.json",
+    "compiler": "g++ 11.4.0 on Ubuntu 22.04.5",
+    "opencv": "4.5.4 core private extracted package (Freehand only)"
+  },
+  "ios": {
+    "xcode": "16.1",
+    "target": "Release/iphoneos arm64, declared minimum iOS 16",
+    "build": "passed",
+    "codesign_deep_strict_verify": "passed",
+    "bundle_identifier": "org.awetzler.volumecarving.updated",
+    "executable_sha256": "5734fa5e53aab203e0643ffb87096c5764d1f00d7df2925733cbf2d7236eb784",
+    "controller_source_sha256": "e7b6b47fb95e4d83050017ca0f44d3b537431b5896adb5c7cb428fcfaf09fca4",
+    "opencv": "official 4.12 iOS framework, Freehand only",
+    "runtime": "separate ios-result.json and capture provenance, when present",
+    "display_color_conversion": "Display-only normalized float RGBA source; saved original RGBA bytes and native operators unchanged",
+    "display_helper_test": "ios-display-colors-test.json"
+  },
+  "android": "See ../../android/VALIDATION.json for source/package/build evidence and android-result.json for separate physical runtime evidence; compile support is not runtime proof",
+  "new_interface_checks": "desktop-rerun.json; delayed previous geometry response rejected, old result cleared, one run at a time, same-origin and loopback guards",
+  "limits": [
+    "Fixed 36-view supplied-pose dataset only",
+    "No live camera or original SDK restored",
+    "Desktop browser GPU renders geometry; native CPU executes reconstruction",
+    "New C ABI/frontends were not independently sanitizer-instrumented; earlier offline sanitizers cover the documented recovered-core paths only"
+  ],
+  "c_abi_prism_regression": {
+    "macos": "1/1 passed",
+    "linux": "1/1 passed",
+    "checks": [
+      "all packed occupancy bits",
+      "analytic prism bounds/counts",
+      "caller-mask preservation",
+      "idempotence",
+      "rejected-input atomicity",
+      "observed boundary count/bounds"
+    ]
+  },
+  "shared_replay_source": "The same updated/native/replay.cpp is compiled with PROJECT_FREEHAND=1 or 0 for the two native C ABI implementations."
+}

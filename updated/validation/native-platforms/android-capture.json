@@ -1,0 +1,52 @@
+{
+  "platform": "android",
+  "capture": "adb screenrecord physical Pixel2 display",
+  "source_sha256": "797e6ef27d4d8cd25fbebbe4ca7c1599c5b4543ce67ad9a5c94d4ac4fdf2fdef",
+  "source_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920
+      }
+    ],
+    "format": {
+      "duration": "64.990844",
+      "size": "10827694"
+    }
+  },
+  "source_start_seconds": 40.0,
+  "excerpt_duration_seconds": 22.0,
+  "crop": {
+    "top": 64,
+    "bottom": 126
+  },
+  "audio_removed": true,
+  "playback": "capture timing retained; input replay speed follows labels in app",
+  "files": [
+    {
+      "path": "updated/assets/android-native.mp4",
+      "bytes": 335427,
+      "sha256": "bf560c95ac7f4a4ce55c7405dcd8791c9d438b5536b2ec2404dbb2870a5db16e"
+    },
+    {
+      "path": "updated/assets/android-native.gif",
+      "bytes": 95386,
+      "sha256": "2532fb5635f7026f3f1e7652ccc726d7607f4ba1c3a0ed847aa7fcc04d2fe568"
+    },
+    {
+      "path": "updated/assets/android-native.png",
+      "bytes": 257565,
+      "sha256": "f84f4d6171b731f68cc10f19d65133eb506cb7f1cee16834f3a6489b4fd3bcc2"
+    }
+  ],
+  "poster_offset_in_excerpt_seconds": 21.588633,
+  "poster_selection": "Completed geometry near the end of the existing MP4; extracted without changing MP4 bytes",
+  "gif_offset_in_excerpt_seconds": 10.988633,
+  "gif_excerpt_duration_seconds": 11,
+  "gif_source_start_seconds": 50.988633,
+  "gif_derivation": "Final 11 seconds of the existing cropped MP4, sampled at 6 fps and resized 290 pixels wide; original timing retained; no frame synthesis",
+  "mp4_preserved_sha256": "bf560c95ac7f4a4ce55c7405dcd8791c9d438b5536b2ec2404dbb2870a5db16e"
+}

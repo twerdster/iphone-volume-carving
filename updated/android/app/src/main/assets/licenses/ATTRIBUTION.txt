@@ -1,0 +1,13 @@
+Volume Carving: updated Android frontend for Aaron Wetzler.
+Original project: Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler.
+Original source bytes and historical notices remain in the repository.
+The maintained native adapter calls the recovered reconstruction operators.
+Carving calls the unchanged Sculptor<128> ACCURATE implementation; observed filtering is separate output processing. No triangle extraction is provided.
+
+Dinosaur sequence: Wolfgang Niem, University of Hannover, via Oxford VGG
+https://www.robots.ox.ac.uk/~vgg/data/mview/
+and Ben Tordoff's example bundled with the recovered Freehand archive.
+Calibration: unchanged rounded demoP table, not original Oxford calibration.
+Existing source/sample/data terms remain; no new blanket license is assigned.
+No camera, pose tracker, general 3D accuracy or captured-device validation claim.
+Repository: https://github.com/twerdster/iphone-volume-carving

@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-14",
+  "host": "macOS arm64 / Apple clang16",
+  "result": "PASS: 256 byte values in every RGBA channel, range/error, source preservation, teal/alpha and empty input",
+  "exit_code": 0,
+  "scope": "Actual helper used for SceneKit display only; all 256 source byte values in each RGBA channel, finite range and float error<=6e-8, source-buffer preservation, known teal/alpha order and empty input",
+  "source_sha256": "172eee689e6c7ac08524a2db58450aa6ee2db374cc73e163185d85eb506b3378",
+  "saved_native_arrays_changed": false,
+  "physical_rendering": "Actual final physical iPhone recording confirms visible vertex colors/teal points and unchanged saved-array hashes; see ios-result/artifact/capture records"
+}

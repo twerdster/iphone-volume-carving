@@ -1,0 +1,11 @@
+{
+  "executable_sha256": "5734fa5e53aab203e0643ffb87096c5764d1f00d7df2925733cbf2d7236eb784",
+  "platform": "iOS18.0.1 on physical iPhone12",
+  "capture_label": "volume-ios-floatcolors",
+  "launch_arguments": [
+    "--autorun",
+    "--autorun-delay",
+    "2",
+    "--orbit"
+  ]
+}

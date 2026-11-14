@@ -1,0 +1,536 @@
+{
+  "recorded_date": "2026-11-14",
+  "scope": "Compile/lint/package checks; physical Android execution is performed separately by the root device runner.",
+  "application_id": "org.awetzler.volumecarving.updated",
+  "launch_activity": "org.awetzler.volumecarving.updated/.MainActivity",
+  "min_sdk_declared": 26,
+  "target_sdk": 34,
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "build": {
+    "status": "passed",
+    "jdk": "OpenJDK 21.0.11",
+    "gradle": "8.7 via checked-in wrapper",
+    "android_gradle_plugin": "8.3.0",
+    "ndk": "27.2.12479018",
+    "cmake": "3.22.1",
+    "opencv": "not used",
+    "network": "offline build using private cloned caches",
+    "lint": {
+      "errors": 0,
+      "warnings": 16,
+      "scope": "English literals/localization plus backup rule suggestion"
+    },
+    "native_warning": "Legacy unused mesh path emits mismatched new[]/delete warning; Android Volume uses carving and observed boundary extraction, not that missing meshing path."
+  },
+  "apk": {
+    "bytes": 26772647,
+    "sha256": "f840fb865480724aa0eafc82ab7c3e1cb52f8f79b3345afce334383c217c4fb7",
+    "kind": "debug APK; local signature only; no signing identity recorded"
+  },
+  "native_symbols": [
+    "000000000001e384 W Sculptor<128>::SculpAccurate(SculptData*)",
+    "000000000001cb90 W Sculptor<128>::Sculp(SculptData*, SculptorMode)",
+    "000000000001c054 T wvc_apply"
+  ],
+  "display_transform": {
+    "axes": "(world_y,world_z,-world_x)",
+    "normalization": "center displayed bounds; scale largest extent to 1.8",
+    "lighting": "height color only; no native texture",
+    "saved_arrays": "unchanged raw native coordinates"
+  },
+  "immutable_apk_copy": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/dist/volume-updated-final.apk",
+  "packaged_libraries": {
+    "lib/arm64-v8a/libc++_shared.so": {
+      "bytes": 1292904,
+      "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4"
+    },
+    "lib/arm64-v8a/libcarving_android.so": {
+      "bytes": 192040,
+      "sha256": "77b01cf3a5817c87104cd27476e55b0e45af006b1f975bb8deb5b115d8ca701d"
+    },
+    "lib/armeabi-v7a/libc++_shared.so": {
+      "bytes": 872872,
+      "sha256": "91b49f121b3120538faff020fcf535ade1d945e65ccd793fc0b815b5799bbdf0"
+    },
+    "lib/armeabi-v7a/libcarving_android.so": {
+      "bytes": 93748,
+      "sha256": "28c60b687478dedd39ff35e7a54d66efbf409f4c8a40cdee212eed4d71fd901a"
+    }
+  },
+  "input": {
+    "fixture": "36 dinosaur photographs and silhouettes",
+    "width": 720,
+    "height": 576,
+    "matrix_source": "unchanged rounded upstream demoP",
+    "cube_side": 0.2463,
+    "cube_corner": [
+      -0.1307,
+      -0.1307,
+      -0.7483
+    ],
+    "manifest": {
+      "calibration.json": {
+        "bytes": 7489,
+        "sha256": "4633c518f33439015bf350ac3669a21820b5c3fc0754079b16ac12c7130d7531"
+      },
+      "pictures/viff.1.png": {
+        "bytes": 688978,
+        "sha256": "77e4ff144abc4ba2dd8330bba3074a55102c196afca304ebff6ecd88c5785e87"
+      },
+      "pictures/viff.10.png": {
+        "bytes": 648675,
+        "sha256": "1fb727e4d707eda118e9c1a9ee3803407202dd21c532841a418f49878b71978f"
+      },
+      "pictures/viff.11.png": {
+        "bytes": 648263,
+        "sha256": "4b8ad00d79ce476c474b6e2d5a53da9f7e79821f531bf338fa7a3f9dbce4dd54"
+      },
+      "pictures/viff.12.png": {
+        "bytes": 647837,
+        "sha256": "f2a60c37a73a1c12da20bfab64747c76669093af38d9abcb43238b4e6f80b6e9"
+      },
+      "pictures/viff.13.png": {
+        "bytes": 646981,
+        "sha256": "2cd2dd6185231f3e5996ae502dfaaea70a661802780dd62288c26d2004647a4e"
+      },
+      "pictures/viff.14.png": {
+        "bytes": 650539,
+        "sha256": "86d7d9e0637e5315d34d7dd539aa03a71012dcf8e3049bfabc11e4b46c65d739"
+      },
+      "pictures/viff.15.png": {
+        "bytes": 656332,
+        "sha256": "39281771cc8734d024b42fe107fa85acf9bf03bffe3e465a735023c5dfb9fb60"
+      },
+      "pictures/viff.16.png": {
+        "bytes": 661268,
+        "sha256": "b1421362b60cb9b0f18c0e04456ec8317d5dfdb4497d7179a292297280b355c1"
+      },
+      "pictures/viff.17.png": {
+        "bytes": 668584,
+        "sha256": "4bfe1d1c896f2e639e6c38b1fe2476693ccb34603bd28172d61d1e347bbd8059"
+      },
+      "pictures/viff.18.png": {
+        "bytes": 674573,
+        "sha256": "85aa53140db55b277f67a05f68c1d134ce0cb614865e1db0aa442c084b2b1c66"
+      },
+      "pictures/viff.19.png": {
+        "bytes": 676303,
+        "sha256": "03d619ad49bd99a6d909e6ebc462ea8730694382d403b043bb1596b0d2c3ca03"
+      },
+      "pictures/viff.2.png": {
+        "bytes": 689138,
+        "sha256": "e3638436ded933b90e4843d322da2e18a6cc842679d29dbd81ed7c2e8312fa48"
+      },
+      "pictures/viff.20.png": {
+        "bytes": 678688,
+        "sha256": "eaa2b1fa1ca53321e79a1245a5358d86848092aca2a04e16e8746941baeb25a7"
+      },
+      "pictures/viff.21.png": {
+        "bytes": 679938,
+        "sha256": "0c3f0e57db403c9ae89350933cd565678ace49e8deee3f536618cd041b905eef"
+      },
+      "pictures/viff.22.png": {
+        "bytes": 680524,
+        "sha256": "249ab571edc3d0053c940ba8d148cddbdccbab87f3e3322f13d9ee4d41250c72"
+      },
+      "pictures/viff.23.png": {
+        "bytes": 680378,
+        "sha256": "375f3b434ae02524b611f8d2496ec2be533bfe23a2bf7e4d6af36ca7d6be04c0"
+      },
+      "pictures/viff.24.png": {
+        "bytes": 678530,
+        "sha256": "85c4eac890b93ba6659bd36f13223a9057bccced31aec76b9ce7a06ab4df39d6"
+      },
+      "pictures/viff.25.png": {
+        "bytes": 675126,
+        "sha256": "e1d1937b85a5e294bc22e76ae8dc7865e594a0232447f2316551b9160b14241b"
+      },
+      "pictures/viff.26.png": {
+        "bytes": 672905,
+        "sha256": "6bcf1fd41414a69601faef7f11b72587c53effed713f9f64b8a9ccbc3fb07058"
+      },
+      "pictures/viff.27.png": {
+        "bytes": 673640,
+        "sha256": "30c4b5413a84b10995f9244dd99084c99dbabbffcfcb5218e1970c22d90ca0dc"
+      },
+      "pictures/viff.28.png": {
+        "bytes": 671700,
+        "sha256": "d6ab156107a3098e88666fb071a6cda9ecc1f8a8e44618fbd261e6d0af047377"
+      },
+      "pictures/viff.29.png": {
+        "bytes": 668358,
+        "sha256": "48cb8c4e66cbab4f41a2feeae21c027ecee93e863fa9cd30036d2d7cebe39267"
+      },
+      "pictures/viff.3.png": {
+        "bytes": 688302,
+        "sha256": "d357906502d3929c8de9e96eed6d01f14522092446d6a34b121272e577b82c1d"
+      },
+      "pictures/viff.30.png": {
+        "bytes": 666349,
+        "sha256": "62e1b1812467c33afd3dffdba7c72a11bb1a3f81db978758554bf8cef72d4ed8"
+      },
+      "pictures/viff.31.png": {
+        "bytes": 666678,
+        "sha256": "029cb2662e686f7cf8e0868547e4bffb9d27f51e4136f09fdff2ee824fcee162"
+      },
+      "pictures/viff.32.png": {
+        "bytes": 669701,
+        "sha256": "893e07f24b0134ebc78ca6af2da6b7b134072e08d509fdab158536c5c95b22e9"
+      },
+      "pictures/viff.33.png": {
+        "bytes": 673514,
+        "sha256": "08f3ec2d26fe13407c1a03b839150b3fac6d6ef250555ce8c3316532361800eb"
+      },
+      "pictures/viff.34.png": {
+        "bytes": 679901,
+        "sha256": "596a8c171604dcdc8fe046e1eea022ee63a50ecd176111d790fc4001137512df"
+      },
+      "pictures/viff.35.png": {
+        "bytes": 685905,
+        "sha256": "6557a8184086117f33d68b55defeb521c7d875cb609c5b7379f4813004fea437"
+      },
+      "pictures/viff.36.png": {
+        "bytes": 687571,
+        "sha256": "7e9ee1d62a9f70156507127e10a5e6d6bb5f0b26aaf74a2e477fa2085326873f"
+      },
+      "pictures/viff.4.png": {
+        "bytes": 683767,
+        "sha256": "cf47a9553fe0e5391c930bbb2b978c9d156359368060b7e73fd3e33c6fe83de7"
+      },
+      "pictures/viff.5.png": {
+        "bytes": 678115,
+        "sha256": "b646113afd5ac0ca43e3fe8d0c7d9b79f5062b6f9006e07d5faae2c8883c8af7"
+      },
+      "pictures/viff.6.png": {
+        "bytes": 672031,
+        "sha256": "79e3c6127377c4cca26458c7e42e4f994cb6b53384d51b9a1d730d7192e44cd4"
+      },
+      "pictures/viff.7.png": {
+        "bytes": 664489,
+        "sha256": "8b30b721928727f7af3c4cf41aa25fb8d04292c6f1c87d49301f0f81f4eb0d4b"
+      },
+      "pictures/viff.8.png": {
+        "bytes": 658745,
+        "sha256": "997c9322bc5d94262653b7f3c1a2271e3880a0584467f96d02959e7bcceb3b21"
+      },
+      "pictures/viff.9.png": {
+        "bytes": 655056,
+        "sha256": "46ed6c45ceb4e42bb9ff35501f8bb598ce7185b8e4a335202c5c24324b347346"
+      },
+      "silhouettes/sil_1.png": {
+        "bytes": 2457,
+        "sha256": "ab4c1f4762679ae59224e9174586761a9e9549c769d5930e3c87de89f73e43ba"
+      },
+      "silhouettes/sil_10.png": {
+        "bytes": 1533,
+        "sha256": "a363d8be5c2b5d1f44949bd50ad91fd740591e223861462ef862d7a2fa1a5975"
+      },
+      "silhouettes/sil_11.png": {
+        "bytes": 1497,
+        "sha256": "c12c1cf5d4859b427e15bccb7b2be2ea2ed882a4a61d7745dd2aba7bc58c0af0"
+      },
+      "silhouettes/sil_12.png": {
+        "bytes": 1352,
+        "sha256": "3e4ea87759095a7e0edead294124d11d556309c1f07e4af07a038867a449b769"
+      },
+      "silhouettes/sil_13.png": {
+        "bytes": 1450,
+        "sha256": "6823b3d95cb8f98477c4c0565400f4af20dbf2943fd1c8783959494306faf3fd"
+      },
+      "silhouettes/sil_14.png": {
+        "bytes": 1526,
+        "sha256": "39db966845cd5d76e4f1a1ee13eebf9a7c52469f5f4f73dd27737c5726b6d9fe"
+      },
+      "silhouettes/sil_15.png": {
+        "bytes": 1820,
+        "sha256": "505e18bc19889edd6b8c759e8d4579f51e97c558b7f1035816ed35eff4122cfa"
+      },
+      "silhouettes/sil_16.png": {
+        "bytes": 2047,
+        "sha256": "f7ad6507bd3bfd0ed39213f724e0328d9be5fe18e693a90c2b6dc96ac303a6ba"
+      },
+      "silhouettes/sil_17.png": {
+        "bytes": 2243,
+        "sha256": "8fb669a7abdbad464225ce7dd91964eb1922ce0f0678b71823e960140611a1d6"
+      },
+      "silhouettes/sil_18.png": {
+        "bytes": 2245,
+        "sha256": "0768306f836eb7e698d1ea9e65e3baa497c21913da9bf76cd235d51c56ab3c1a"
+      },
+      "silhouettes/sil_19.png": {
+        "bytes": 2232,
+        "sha256": "4909380a0b7afc89cd89e44144992f54dc7471574708554f5c0074c35506d8d1"
+      },
+      "silhouettes/sil_2.png": {
+        "bytes": 2505,
+        "sha256": "3c22ac856272d1e394e10d0efb4097ed13926f7a6088ff4de287f24387c2219c"
+      },
+      "silhouettes/sil_20.png": {
+        "bytes": 2298,
+        "sha256": "3ec810327eb453319e8a1a454c107d01285d3dcb1ab9e0fa735b537c2db36a66"
+      },
+      "silhouettes/sil_21.png": {
+        "bytes": 2291,
+        "sha256": "dbb6e501741d5ae207bd8fe00ae908883e1843cecef3fd007c440f75063fea73"
+      },
+      "silhouettes/sil_22.png": {
+        "bytes": 2299,
+        "sha256": "f8021f2eacd3e03ac845e8e53387828b26005bc1dea0cab7da17b4b31605ec41"
+      },
+      "silhouettes/sil_23.png": {
+        "bytes": 2306,
+        "sha256": "43d052566f5c017cecb84b05c4c48bfb922e3325638b4dd43087c9e2a1a628fd"
+      },
+      "silhouettes/sil_24.png": {
+        "bytes": 2309,
+        "sha256": "63557609df17afb8fc79fb41b4680decd7bd2c060f6c553e2047f8eacd0de625"
+      },
+      "silhouettes/sil_25.png": {
+        "bytes": 2199,
+        "sha256": "02f00d065ff4a42f62623e36ad85eee7269deb6264d9bb3f931e6987180995bf"
+      },
+      "silhouettes/sil_26.png": {
+        "bytes": 2043,
+        "sha256": "efb6b812de3dc2817369bae1d040a57da84cd36fad7c5ef745a4f4a8fff07492"
+      },
+      "silhouettes/sil_27.png": {
+        "bytes": 1896,
+        "sha256": "9f16d6047e4f7eeaef567f67d41a1e03d6538aa9a8295626d560f888e82c0b2f"
+      },
+      "silhouettes/sil_28.png": {
+        "bytes": 1658,
+        "sha256": "b5d8f2d3b889257080bd0ea650fb634b2cbba9a95ff0be0c42c1ff9187990adb"
+      },
+      "silhouettes/sil_29.png": {
+        "bytes": 1534,
+        "sha256": "19920540bbd222a1834a4f46a3b718e41e693a5c357405190c802ca684dc7a9f"
+      },
+      "silhouettes/sil_3.png": {
+        "bytes": 2365,
+        "sha256": "b75550061447010ba69928a9b31634a87cb7bf852f6ba13f0eeb42df976c9320"
+      },
+      "silhouettes/sil_30.png": {
+        "bytes": 1511,
+        "sha256": "a38ba4a6d56eaaf4ef661bd8968d9d9f533a9c206c2a87c65aa8980bd47a02e8"
+      },
+      "silhouettes/sil_31.png": {
+        "bytes": 1513,
+        "sha256": "34843ee738eca8eee8bdfeb0cce31912ccfa48ede5682ba040b31fee508c66cf"
+      },
+      "silhouettes/sil_32.png": {
+        "bytes": 1804,
+        "sha256": "12140c4357454b60edc60907fcd6e0db91b396a17eaaaccb728f327f07134848"
+      },
+      "silhouettes/sil_33.png": {
+        "bytes": 1929,
+        "sha256": "b0ccbcde0bd52410484230d0bee7618c72e8d0d8291b8ea162b9763746babcf8"
+      },
+      "silhouettes/sil_34.png": {
+        "bytes": 2023,
+        "sha256": "d2455a72b2373ee4439531b8ded6b058ea570babd49652170ac3d9d43110b065"
+      },
+      "silhouettes/sil_35.png": {
+        "bytes": 2183,
+        "sha256": "ea8abcde2f59740acac2c10b4a4e4dababeda532a5087d961889a73ce42ea7b7"
+      },
+      "silhouettes/sil_36.png": {
+        "bytes": 2319,
+        "sha256": "01eb257666ebfa88c889a5a7eec19873363220465f0a27f659d7cb54bcf895ff"
+      },
+      "silhouettes/sil_4.png": {
+        "bytes": 2336,
+        "sha256": "63bc08db3f1dadd5d4f8e30ac6276016607ec2d3778cd80c5c4fd4104ac9e28c"
+      },
+      "silhouettes/sil_5.png": {
+        "bytes": 2339,
+        "sha256": "eff7c7241d8f71838488f6ea94edfa6035fe500286d61cce02fbbab287869591"
+      },
+      "silhouettes/sil_6.png": {
+        "bytes": 2247,
+        "sha256": "2787186a0ace5fd22068f1b9a519b144cbb1c73b5da44b94881bdcc2d31e8e95"
+      },
+      "silhouettes/sil_7.png": {
+        "bytes": 2183,
+        "sha256": "f72ef2b695000ad9d455bc77a372be6c0e6f9f81b5524a8765344df25b9f205a"
+      },
+      "silhouettes/sil_8.png": {
+        "bytes": 1960,
+        "sha256": "1314ddabc1a74c47c9417106fc2dfcbff5b5852cdbf55402fd41aadb02fc0cb3"
+      },
+      "silhouettes/sil_9.png": {
+        "bytes": 1787,
+        "sha256": "321976b8d5708babac5fbc886f0492927760467d5956cc95d045b96749ded4c5"
+      }
+    },
+    "bundled_saved_geometry_or_tracking_output": false,
+    "dataset_provenance": "Wolfgang Niem, Hannover, via Oxford VGG and Ben Tordoff example in recovered Freehand archive; existing terms retained; no new blanket dataset license."
+  },
+  "compiled_source_inputs": {
+    "updated/android/app/build.gradle": {
+      "bytes": 3027,
+      "sha256": "a4d6973b40de1f2d7ecba69278aae95ed7c76717a25ef6aed0c365b538cc4651"
+    },
+    "updated/android/app/src/main/AndroidManifest.xml": {
+      "bytes": 656,
+      "sha256": "074b0d8ba3bf4c03612ddc7fe770892093ea45a7cf4f1ccff68481de64c4a674"
+    },
+    "updated/android/app/src/main/cpp/CMakeLists.txt": {
+      "bytes": 677,
+      "sha256": "5d2423e4368991b1e649bc7f26a23944b45ace6392f35031e65c33a45ac4345d"
+    },
+    "updated/android/app/src/main/cpp/bridge.cpp": {
+      "bytes": 5451,
+      "sha256": "6321e81ccd0bc21a4f0b09a0be7287b5f5a9cc320d3a1d443fd154e3b6e4ac64"
+    },
+    "updated/android/app/src/main/java/org/awetzler/volumecarving/updated/GeometryView.java": {
+      "bytes": 7633,
+      "sha256": "18c1fd6e37e10d36a2be8727e0ab7d992b85e8be96b08f85e684ee6a0b934079"
+    },
+    "updated/android/app/src/main/java/org/awetzler/volumecarving/updated/MainActivity.java": {
+      "bytes": 17187,
+      "sha256": "fdb0d9f8228dc7f8beb322f9f48d274410d3321c114f79a8833ccca9c1d49b00"
+    },
+    "updated/android/app/src/main/java/org/awetzler/volumecarving/updated/NativeBridge.java": {
+      "bytes": 684,
+      "sha256": "8c01e05a28a9c6319444dfdbdca90a0ba4f8a66ba104eaee5552106b81ecd960"
+    },
+    "updated/android/build.gradle": {
+      "bytes": 394,
+      "sha256": "bd45d53261258220ee34b015e1f55ba0b61d6b17b869dbe77c0244e68ad04a32"
+    },
+    "updated/android/gradle.properties": {
+      "bytes": 128,
+      "sha256": "2af7a4ef7bd34957b17617caa3e48a25f03f629aa3a496967d866a8eedb828e7"
+    },
+    "updated/android/settings.gradle": {
+      "bytes": 281,
+      "sha256": "d1f25768853c537416db9f5be45379fe55b3a51bd749224fea38acb581c51b0f"
+    },
+    "updated/native/CMakeLists.txt": {
+      "bytes": 1664,
+      "sha256": "2447c64bf1cef8e5a3a9703a97279712ecb8151dea3758516640af0b28fdf05f"
+    },
+    "updated/native/volume_carving.cpp": {
+      "bytes": 5254,
+      "sha256": "91c564ef098f847470131031a9233adb3516ca592f53df5323eaa82242372a74"
+    },
+    "updated/native/volume_carving.h": {
+      "bytes": 2158,
+      "sha256": "34dd3f5e975c7fafe4a85369d3f4387944ac1bfb3b2235c416d88115c3787328"
+    },
+    "source/Sculptor/ColorRGB.h": {
+      "bytes": 229,
+      "sha256": "c6db1f89ca006d4170a89e6a77c3d74b6a15d724c27403777df6cd44efd43599"
+    },
+    "source/Sculptor/Edge.h": {
+      "bytes": 235,
+      "sha256": "93b6d1af10260148d271763dacbd1c7dfdca10dc44fc1d3096964d0ec8148c18"
+    },
+    "source/Sculptor/EdgeEx.h": {
+      "bytes": 1760,
+      "sha256": "4bd6e36de2a7e004664c6e5ba49338d88d92072c465007627143048f698e8a68"
+    },
+    "source/Sculptor/Mesh.cpp": {
+      "bytes": 4838,
+      "sha256": "0756130092902943acf063bfca90087d6931b93858b49b28790170016e80df02"
+    },
+    "source/Sculptor/Mesh.h": {
+      "bytes": 1445,
+      "sha256": "66fcd4367c75fccfabbcf027d4ad0dd18b844d6a97c7a1f4c7c1a4c2cd139246"
+    },
+    "source/Sculptor/MeshMargins.h": {
+      "bytes": 3387,
+      "sha256": "674f55c6306a98e6b392824b07f9596a4eccaad66b454e27bf49823911aa2640"
+    },
+    "source/Sculptor/SculptData.h": {
+      "bytes": 1193,
+      "sha256": "9411ac98f9a83c197202df3af12d5984346f39c078f49c86d88e5bf1513e88ce"
+    },
+    "source/Sculptor/Sculptor.h": {
+      "bytes": 15328,
+      "sha256": "2b25b34d3d5aa3dc159f88a785c92b0bf882dc0432a98c5f6bb4fac37b9d4db9"
+    },
+    "source/Sculptor/Shape.h": {
+      "bytes": 4612,
+      "sha256": "c3e40eba1678b1a8b9ea3d7f421a699d190d5221c6eebd54817c2982d6c60345"
+    },
+    "source/Sculptor/Triangle.cpp": {
+      "bytes": 1178,
+      "sha256": "ebbf9c17aaee65e9b795eb8c78950301bbabb37c43c93905acfe4735e94ec1d8"
+    },
+    "source/Sculptor/Triangle.h": {
+      "bytes": 1410,
+      "sha256": "8a51e5de0b6f06d72c6f34bd8633f2f0e6578b201174fffa4e03fe1b41ea422e"
+    },
+    "source/Sculptor/Vector2D.cpp": {
+      "bytes": 155,
+      "sha256": "29216b72321b74562558020c0c194bbabfd72db2fe1da17e5a88ab1ec5b1027a"
+    },
+    "source/Sculptor/Vector2D.h": {
+      "bytes": 350,
+      "sha256": "153f7e2a90c24413026198ac6fb68a747aee1f595f17465aa4f2d049a241fb95"
+    },
+    "source/Sculptor/Vector2DEx.cpp": {
+      "bytes": 1584,
+      "sha256": "cc420ab8803ecece6cf94b1f473fcabda972d4fa185ac8bbf3f3e4138c3683e7"
+    },
+    "source/Sculptor/Vector2DEx.h": {
+      "bytes": 1940,
+      "sha256": "b7283f43c2ae4ee66551c30611bb9cbdd27a1f3e347ad5941bd9ee614887c2d1"
+    },
+    "source/Sculptor/Vector3D.cpp": {
+      "bytes": 1257,
+      "sha256": "0edb4d397a9d02accee26a617290db5e030ad2c3b88c4f5d15cc9881c2522d24"
+    },
+    "source/Sculptor/Vector3D.h": {
+      "bytes": 1645,
+      "sha256": "442345b7dfe15a7ddb72ce7cf36a31087913bd3cb5a759b4fa96b1df4023c78d"
+    },
+    "source/Sculptor/Vector3DEx.cpp": {
+      "bytes": 2696,
+      "sha256": "8d577eb1054aa891b16034f3c39b60c3d16848dda92276f61fdafdeb6b688583"
+    },
+    "source/Sculptor/Vector3DEx.h": {
+      "bytes": 2722,
+      "sha256": "aba5598de8f21dea208179a9e06b87a8f4096ea403222b9d1416be36208522f8"
+    },
+    "source/Sculptor/Vertex3D.h": {
+      "bytes": 3571,
+      "sha256": "611f8b493bd26d0e6f293c51d6fda32b2e2e6fb115e68e1dc2980b8e50f2c847"
+    }
+  },
+  "prepared_original_manifests": [],
+  "bundled_notices": [
+    "assets/licenses/ATTRIBUTION.txt",
+    "assets/licenses/gradle-wrapper/LICENSE",
+    "assets/licenses/gradle-wrapper/NOTICE"
+  ],
+  "runtime_contract": {
+    "native_implementation": "unchanged Sculptor<128> ACCURATE; separate observed boundary output filter",
+    "threading": "process-wide FIFO executor plus atomic run ownership; replacement Activities wait for prior cleanup; closed checks before finalization/publication; native context released in finally; no per-Activity shutdown",
+    "geometry": "all observed boundary points; display height color is not recovered texture",
+    "output_directory": "files/reconstruction",
+    "completion": "run-result.json invalidated at start, published atomically last after output writes/hashes; unique temporary filenames; progress.json is incomplete evidence",
+    "output_format": "positions float32 little endian; normals/colors arrays empty; raw occupancy is original packed native bytes",
+    "fnv_definition": "packed original x/y/z occupancy byte layout",
+    "known_baseline_fnv": "bc1847c8e8264d3f",
+    "baseline_scope": "Mac C ABI replay on same historical fixture; Android matching is not asserted by compile checks",
+    "completion_semantics": "status complete means 36 actual native views and structurally checked saved arrays with output hashes. The Android app does not gate fixture baseline counts/FNV; the device runner compares them externally. It is not a baseline_verified assertion.",
+    "saved_geometry_coordinates": "raw world coordinates in calibration units, without the iOS/host normalization or Z flip"
+  },
+  "limitations": [
+    "No device/emulator/camera operation was performed by the build agent.",
+    "Declared API 26 and 32-bit ABI are compile targets, not validated runtime compatibility.",
+    "No independent 3D geometric accuracy or live pose tracking claim."
+  ],
+  "maintainer_local": {
+    "private_work_root": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android",
+    "apk": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/build/app/outputs/apk/debug/app-debug.apk",
+    "build_log": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/build.log",
+    "dataset_path": "/Users/aaron/repos/student-projects/freehand-voxel-carving/source/PointCloudSample/dinosaur",
+    "dependencies": "Read-only existing cutout-runtime SDK/NDK/Gradle; no OpenCV dependency or global installation."
+  }
+}

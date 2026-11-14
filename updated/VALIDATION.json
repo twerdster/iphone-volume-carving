@@ -48,5 +48,28 @@
     "rounds_completed": 2,
     "scope": "tools-disabled editorial/factual review against supplied code and evidence; no execution by reviewer",
     "feedback_applied": "qualification of platform/parity/sanitizer/metric scopes, input/output provenance, gates and author attribution; factual suggestions checked against code and actual records"
+  },
+  "native_frontends_2026_11_14": {
+    "guide": "PLATFORMS.md",
+    "build_and_source": "validation/native-platforms/build-and-source.json",
+    "macos_native_result": "validation/native-platforms/macos-result.json",
+    "linux_native_result": "validation/native-platforms/linux-result.json",
+    "desktop_cross_platform": "validation/native-platforms/desktop-cross-platform.json",
+    "desktop_repeated_run_check": "validation/native-platforms/desktop-rerun.json",
+    "capture_provenance": [
+      "validation/native-platforms/macos-capture.json",
+      "validation/native-platforms/linux-capture.json"
+    ],
+    "android_build_package": "android/VALIDATION.json",
+    "physical_runtime": {
+      "ios_result": "validation/native-platforms/ios-result.json",
+      "ios_artifact": "validation/native-platforms/ios-artifact.json",
+      "android_result": "validation/native-platforms/android-result.json",
+      "android_artifact": "validation/native-platforms/android-artifact.json",
+      "scope": "All36 supplied-camera views completed on physical iPhone12/iOS18.0.1 and Pixel2/Android10. Recorded counts/FNV match baseline; Android baseline checked externally. Other devices and live capture are not covered."
+    },
+    "scope": "New native C ABI/frontends execute the fixed 36-view dinosaur fixture with supplied cameras; original source and root README preserved; no live camera/pose SDK restored",
+    "platform_status": "validation/native-platforms/platform-status.json",
+    "ios_display_conversion_test": "validation/native-platforms/ios-display-colors-test.json"
   }
 }

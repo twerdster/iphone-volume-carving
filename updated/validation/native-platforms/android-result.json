@@ -1,0 +1,401 @@
+{
+  "views": 36,
+  "raw_voxels": 27310,
+  "observed_voxels": 21480,
+  "observed_boundary_points": 6415,
+  "occupancy_fnv1a64": "bc1847c8e8264d3f",
+  "status": "complete",
+  "implementation": "unchanged recovered Sculptor<128> ACCURATE + separate observed boundary output filter",
+  "geometry_type": "observed boundary points; height color is display only",
+  "grid_size": 128,
+  "view_count": 36,
+  "per_view": [
+    {
+      "views": 1,
+      "raw_voxels": 752505,
+      "observed_voxels": 277321,
+      "observed_boundary_points": 54487,
+      "occupancy_fnv1a64": "7e63106f6f57d5bc",
+      "native_apply_and_stats_ms": 1305.399036,
+      "decoded_rgba_sha256": "9cfef89f0454dc95ebd1369190437ab1812e71f8157178fbb0180111fc56fb4a",
+      "decoded_binary_mask_sha256": "e2c79535e8f6bbc5f590e36ec8380b82788732e6405274f9daade6743bd721e1"
+    },
+    {
+      "views": 2,
+      "raw_voxels": 598618,
+      "observed_voxels": 193491,
+      "observed_boundary_points": 48507,
+      "occupancy_fnv1a64": "78c76ff6b55df2f2",
+      "native_apply_and_stats_ms": 1260.751167,
+      "decoded_rgba_sha256": "75caa8396a683a43dba565ba3fdafed59d7bc574295a6583a2cff19e08515372",
+      "decoded_binary_mask_sha256": "26e9b753273dc1681836761150e769eae5be5a3d9ac459f1b1f8e14b17416465"
+    },
+    {
+      "views": 3,
+      "raw_voxels": 509269,
+      "observed_voxels": 135399,
+      "observed_boundary_points": 38652,
+      "occupancy_fnv1a64": "5b8fdbe2924d61ee",
+      "native_apply_and_stats_ms": 1251.826791,
+      "decoded_rgba_sha256": "30b53e23b589648eb5983802a1cba5b311679665c089afc5345e664ce3c6cc93",
+      "decoded_binary_mask_sha256": "7d8a975ebdf21056c219ae9822253b7d59876135bd9277d521bc9c1633ca5f90"
+    },
+    {
+      "views": 4,
+      "raw_voxels": 444649,
+      "observed_voxels": 97755,
+      "observed_boundary_points": 28977,
+      "occupancy_fnv1a64": "d6b9ce809b12710f",
+      "native_apply_and_stats_ms": 1234.603248,
+      "decoded_rgba_sha256": "f2e76b36c51ab282cd1ea36fc6bae1288dc6281ac974aec6474f3cf335e294a3",
+      "decoded_binary_mask_sha256": "3148decd79fbb7b9c58e69dcf0c6dc7d4e914627ab5b10695d484a0bda759dcf"
+    },
+    {
+      "views": 5,
+      "raw_voxels": 397267,
+      "observed_voxels": 75604,
+      "observed_boundary_points": 22824,
+      "occupancy_fnv1a64": "24df11d8e8a7c653",
+      "native_apply_and_stats_ms": 1224.606737,
+      "decoded_rgba_sha256": "6ec1b0e6f2c03eae2e426ee725c5ad795ccfd225d098f3154e03d73732a0c95a",
+      "decoded_binary_mask_sha256": "f4abc6adbc6ecd6d323633800789bef34bc1852dc54f55b5c02f6c6a3efb44a3"
+    },
+    {
+      "views": 6,
+      "raw_voxels": 357510,
+      "observed_voxels": 60852,
+      "observed_boundary_points": 18429,
+      "occupancy_fnv1a64": "be01b28b733771a2",
+      "native_apply_and_stats_ms": 1229.729862,
+      "decoded_rgba_sha256": "3845597db1ec6c8e5d8c36973a78ec529c591a08c5185517a66d530263991fbc",
+      "decoded_binary_mask_sha256": "a802faa18cca41afc0045b92442771f242b88dcf600117c972eb63c52540836c"
+    },
+    {
+      "views": 7,
+      "raw_voxels": 320653,
+      "observed_voxels": 49848,
+      "observed_boundary_points": 15083,
+      "occupancy_fnv1a64": "f9f502adeb688d22",
+      "native_apply_and_stats_ms": 1200.866786,
+      "decoded_rgba_sha256": "7d67daf71251cba1523b5824d6ab9fa287734574e7b695b60f571f6e5c546e3f",
+      "decoded_binary_mask_sha256": "d93ce7a82b4439fd066f3b18df2aa369a842a0bdd172c3928b5d31631a093917"
+    },
+    {
+      "views": 8,
+      "raw_voxels": 285368,
+      "observed_voxels": 42250,
+      "observed_boundary_points": 12680,
+      "occupancy_fnv1a64": "609ff61b10dd7a06",
+      "native_apply_and_stats_ms": 1196.84491,
+      "decoded_rgba_sha256": "602552bb28d35843f474b477f77bde60146ff56773e53f637daa24f7aa0ef80d",
+      "decoded_binary_mask_sha256": "2ad4dcb2f2b4e27216f622f2ed392b7818cb7e6040844b2baa66b57cf5c71fe4"
+    },
+    {
+      "views": 9,
+      "raw_voxels": 249622,
+      "observed_voxels": 37360,
+      "observed_boundary_points": 11063,
+      "occupancy_fnv1a64": "f5be911b173be87d",
+      "native_apply_and_stats_ms": 1181.873295,
+      "decoded_rgba_sha256": "90d2370376cd98f1f61e976ec2ac2297842bd109c14a0348c93b8903943d2949",
+      "decoded_binary_mask_sha256": "d3f27e14a47a5118f969738e540ed48dd2c62266dd2b320e2c45f791040d089c"
+    },
+    {
+      "views": 10,
+      "raw_voxels": 209548,
+      "observed_voxels": 33473,
+      "observed_boundary_points": 9920,
+      "occupancy_fnv1a64": "6255363dfe53c59e",
+      "native_apply_and_stats_ms": 1174.469283,
+      "decoded_rgba_sha256": "25729e11fac392bff0b45806f9b03c62c377d59e64abf5a4ec5cc82600aa8458",
+      "decoded_binary_mask_sha256": "836b202aa8a058b0dd7c31323ca97d6d802f4bffa1ca3127af8852268e3abf3f"
+    },
+    {
+      "views": 11,
+      "raw_voxels": 183406,
+      "observed_voxels": 31254,
+      "observed_boundary_points": 9269,
+      "occupancy_fnv1a64": "251cab9becb2aad3",
+      "native_apply_and_stats_ms": 1186.145691,
+      "decoded_rgba_sha256": "6b1cfbdf15e6b8ef27bdb8a2433f7b041504a6068fc326a648e7b09156a667dd",
+      "decoded_binary_mask_sha256": "0f4540aa09db0a64bc0cd6cc449a8275f1420e4e135806ac1aa29fee300d132e"
+    },
+    {
+      "views": 12,
+      "raw_voxels": 171724,
+      "observed_voxels": 29857,
+      "observed_boundary_points": 8966,
+      "occupancy_fnv1a64": "2a980d6a6b10901f",
+      "native_apply_and_stats_ms": 1184.425327,
+      "decoded_rgba_sha256": "7a987f4daa9e69eb5b00b7dfa26de4254fdeff1e6f0fb82fbc1ecbdc3cfd0b77",
+      "decoded_binary_mask_sha256": "908c6f970a8e28c6d0bde824beaf282e84a8e78cb46c3ae2f6162b21bcafdb6a"
+    },
+    {
+      "views": 13,
+      "raw_voxels": 161151,
+      "observed_voxels": 28099,
+      "observed_boundary_points": 8615,
+      "occupancy_fnv1a64": "d5f038d200e9f66a",
+      "native_apply_and_stats_ms": 1194.99439,
+      "decoded_rgba_sha256": "6b1e3f8e46d862c6861aabb816d93f4b94276666a9ac70cf961b57c2ca2772c7",
+      "decoded_binary_mask_sha256": "aa2e9fe353275b787643144a2b8bb5dd56b191785ab7b7f773dd43a7fb662768"
+    },
+    {
+      "views": 14,
+      "raw_voxels": 151796,
+      "observed_voxels": 26847,
+      "observed_boundary_points": 8009,
+      "occupancy_fnv1a64": "883461ac5a18e5e3",
+      "native_apply_and_stats_ms": 1201.697203,
+      "decoded_rgba_sha256": "1b056a5e50c96de85201819a3f7ca2853e285186e74a1b55acb2685e11b05b58",
+      "decoded_binary_mask_sha256": "dcbc4733e639383c0d390ec8659b7ac87eb723cc7ba8c9277ab8848210fb4a9f"
+    },
+    {
+      "views": 15,
+      "raw_voxels": 142203,
+      "observed_voxels": 25597,
+      "observed_boundary_points": 7551,
+      "occupancy_fnv1a64": "cbf86ceafd6eb815",
+      "native_apply_and_stats_ms": 1194.369911,
+      "decoded_rgba_sha256": "7a74523821269212f8f7a2266561cf42d9f195c8a638b51bdc0841c16daa0e6e",
+      "decoded_binary_mask_sha256": "6cbf3962b7fdfb3066ba5ea2cba7b9d416e4a08911717813cf4c59201c6c00af"
+    },
+    {
+      "views": 16,
+      "raw_voxels": 132134,
+      "observed_voxels": 24729,
+      "observed_boundary_points": 7312,
+      "occupancy_fnv1a64": "06704a968805d6aa",
+      "native_apply_and_stats_ms": 1229.95632,
+      "decoded_rgba_sha256": "fe303e7aa3eb74415412af410e8363e28d25c0b1e47e94ff6d1e46332a61e85c",
+      "decoded_binary_mask_sha256": "23bc682137fbeedad1d8496809747d668ec65a8f91e531416c8c7cd63560e1db"
+    },
+    {
+      "views": 17,
+      "raw_voxels": 120802,
+      "observed_voxels": 24395,
+      "observed_boundary_points": 7199,
+      "occupancy_fnv1a64": "6efdef6de930465e",
+      "native_apply_and_stats_ms": 1233.648664,
+      "decoded_rgba_sha256": "145ba8655e8a61e2b122df100b8fd40b7073e8d59d507614690b9e34d9612b1f",
+      "decoded_binary_mask_sha256": "675d3d0adef4f8688cbc37e9f9dd8a51d4058c27357db6413c1caf503e7ce124"
+    },
+    {
+      "views": 18,
+      "raw_voxels": 107106,
+      "observed_voxels": 24201,
+      "observed_boundary_points": 7136,
+      "occupancy_fnv1a64": "acdf3ccd3436ea5b",
+      "native_apply_and_stats_ms": 1228.761373,
+      "decoded_rgba_sha256": "6c393d18a89501545dc63d82d8c88e6ed89f8bfd063e101de91ff57a0f77075f",
+      "decoded_binary_mask_sha256": "fb260f4f57c126f150f8364558e06444f2d87768dba593990de00c704166603c"
+    },
+    {
+      "views": 19,
+      "raw_voxels": 93026,
+      "observed_voxels": 24007,
+      "observed_boundary_points": 7053,
+      "occupancy_fnv1a64": "3f3b757d1707c731",
+      "native_apply_and_stats_ms": 1248.751739,
+      "decoded_rgba_sha256": "0313bbfe6238194276705b9f510606e62e9cebebcdff1ed1b095c6a4b7450bf3",
+      "decoded_binary_mask_sha256": "3624f010eff52912c1ab12274b602dd0130bf6e1832918c751d870c037f64ec9"
+    },
+    {
+      "views": 20,
+      "raw_voxels": 80312,
+      "observed_voxels": 23799,
+      "observed_boundary_points": 6992,
+      "occupancy_fnv1a64": "d4b9b8393636c419",
+      "native_apply_and_stats_ms": 1222.839705,
+      "decoded_rgba_sha256": "132013856244b1c6e0093a5a2da90987df56e1d659c44d54a75fdcbf2389874e",
+      "decoded_binary_mask_sha256": "cd2916a5b55cd9612b1d96f03128c1d1fdf80dae44f69f1e93ddda49ac0f1dae"
+    },
+    {
+      "views": 21,
+      "raw_voxels": 67812,
+      "observed_voxels": 23602,
+      "observed_boundary_points": 6980,
+      "occupancy_fnv1a64": "0a9f35e6b72cd3b5",
+      "native_apply_and_stats_ms": 1214.358767,
+      "decoded_rgba_sha256": "ee78e8ebf52a18f3b8f97fcea264a1f3e98af9bd57363d345ef9f1e23ab14d12",
+      "decoded_binary_mask_sha256": "8e5c53077bf996245bcbc474669cf05d9af0696bb5876bcb63a8ae25c0adeb3b"
+    },
+    {
+      "views": 22,
+      "raw_voxels": 62687,
+      "observed_voxels": 23390,
+      "observed_boundary_points": 6887,
+      "occupancy_fnv1a64": "9c5dd1cf384dc561",
+      "native_apply_and_stats_ms": 1222.648195,
+      "decoded_rgba_sha256": "a159ed3d8b5641183c2f528a17f5d25678cbe56e0531200719a44207bbb055ec",
+      "decoded_binary_mask_sha256": "d1e98850ce4367c7eebacb391531b5f37d1b50adee70aa726700f9f7458ac159"
+    },
+    {
+      "views": 23,
+      "raw_voxels": 58962,
+      "observed_voxels": 23250,
+      "observed_boundary_points": 6857,
+      "occupancy_fnv1a64": "78d595ca02b16ba6",
+      "native_apply_and_stats_ms": 1215.248923,
+      "decoded_rgba_sha256": "a847a2cfddd5c6d7e0d97bf0d8a5e5a65801725aa2de3515febfe3e1a870e701",
+      "decoded_binary_mask_sha256": "65b5b586cfaaffe2c6f7d5f6bcc77e78821f29af00da14f026ca14ec4b32477a"
+    },
+    {
+      "views": 24,
+      "raw_voxels": 55567,
+      "observed_voxels": 23023,
+      "observed_boundary_points": 6825,
+      "occupancy_fnv1a64": "78a9df5b5c837848",
+      "native_apply_and_stats_ms": 1207.923714,
+      "decoded_rgba_sha256": "5bea57f7a75ff8290bc41ae86dcd8cef779e464dc1c4f0faef2536fd52d17551",
+      "decoded_binary_mask_sha256": "9661c0ccabfa7f22455e79ed152d7aabaed2222901f4f5d47255b4274c943204"
+    },
+    {
+      "views": 25,
+      "raw_voxels": 52238,
+      "observed_voxels": 22740,
+      "observed_boundary_points": 6741,
+      "occupancy_fnv1a64": "945140120386a765",
+      "native_apply_and_stats_ms": 1185.254701,
+      "decoded_rgba_sha256": "05ca1f106ac24c9d3e4c7e705186cf5ed3369befd884b1b5217143f32f4662cb",
+      "decoded_binary_mask_sha256": "7df63ed6f0dc56736217b9d50812da3f9baf38537405dfec7aad3d27ee1cd7dd"
+    },
+    {
+      "views": 26,
+      "raw_voxels": 48521,
+      "observed_voxels": 22479,
+      "observed_boundary_points": 6655,
+      "occupancy_fnv1a64": "a1b57e058da42250",
+      "native_apply_and_stats_ms": 1180.292514,
+      "decoded_rgba_sha256": "c92bf2c81f5fa4ac8a669194164c7f4946828ff984da8ae89f208f98b317e86f",
+      "decoded_binary_mask_sha256": "070d1754601a769ad60bb23735dad425615ed8e7976408c8062d39e04cc00276"
+    },
+    {
+      "views": 27,
+      "raw_voxels": 44299,
+      "observed_voxels": 22387,
+      "observed_boundary_points": 6631,
+      "occupancy_fnv1a64": "ee08feadec433728",
+      "native_apply_and_stats_ms": 1183.296576,
+      "decoded_rgba_sha256": "9af5ed465cce47c3e72d0445fddfa63020fac4dab470db7211db45cdea7e5b32",
+      "decoded_binary_mask_sha256": "8060f21ed4f88723dd790d7a15e7e379083b6435590b5864db585a705fd0c9cf"
+    },
+    {
+      "views": 28,
+      "raw_voxels": 38944,
+      "observed_voxels": 22282,
+      "observed_boundary_points": 6610,
+      "occupancy_fnv1a64": "b240494a5dd51bca",
+      "native_apply_and_stats_ms": 1174.684909,
+      "decoded_rgba_sha256": "c1dfd5b4f4164eb9e2e281c885553dc1ebf75f8035ee98926d170ef459dab18f",
+      "decoded_binary_mask_sha256": "0cab82c5d8cc956d037bf962a790ceaa2f97f9029151d9042ebb0c23c34d7080"
+    },
+    {
+      "views": 29,
+      "raw_voxels": 31760,
+      "observed_voxels": 22139,
+      "observed_boundary_points": 6592,
+      "occupancy_fnv1a64": "df790ec0ea7bc363",
+      "native_apply_and_stats_ms": 1174.258399,
+      "decoded_rgba_sha256": "1404b31339bebdb5b5c1abf1e871955028e7e3de0f5ec914b476b0d282058477",
+      "decoded_binary_mask_sha256": "1040c62eeb0de14df9429400d0098ff810d33a24b32668e8e7737bfd254a9376"
+    },
+    {
+      "views": 30,
+      "raw_voxels": 27965,
+      "observed_voxels": 21975,
+      "observed_boundary_points": 6561,
+      "occupancy_fnv1a64": "7776d1126aff8d2a",
+      "native_apply_and_stats_ms": 1192.743765,
+      "decoded_rgba_sha256": "ab4b30ddb2d10e1127548d3021fa6c4f4323f9cfe667d8070be63d92ebd256c3",
+      "decoded_binary_mask_sha256": "d112817441ea652b54b3bc410e6b40c55d1f77fe58a6bd07cce5de81e40f92fb"
+    },
+    {
+      "views": 31,
+      "raw_voxels": 27806,
+      "observed_voxels": 21881,
+      "observed_boundary_points": 6539,
+      "occupancy_fnv1a64": "59f174b060289769",
+      "native_apply_and_stats_ms": 1199.105588,
+      "decoded_rgba_sha256": "d9a692d486785795718293e8c96bc0ab5c8f329b5cb8e7911bf8e2ee9c29ea6f",
+      "decoded_binary_mask_sha256": "e3b4a2af3e568145ca3512537ebb8264ad858b7dfad1e484211c1698632279ff"
+    },
+    {
+      "views": 32,
+      "raw_voxels": 27648,
+      "observed_voxels": 21767,
+      "observed_boundary_points": 6492,
+      "occupancy_fnv1a64": "2cff4f0248e390e7",
+      "native_apply_and_stats_ms": 1207.619495,
+      "decoded_rgba_sha256": "0bb82beb46906a8d2ed34454fc4af5a2de780adc4e2933fe290f3ca53d8fa060",
+      "decoded_binary_mask_sha256": "6c3c5f28e7e1a101e27bdc91517e3693c6be708d186585719da3e51b51c8ce2d"
+    },
+    {
+      "views": 33,
+      "raw_voxels": 27473,
+      "observed_voxels": 21618,
+      "observed_boundary_points": 6435,
+      "occupancy_fnv1a64": "97ff701601e4305d",
+      "native_apply_and_stats_ms": 1213.068923,
+      "decoded_rgba_sha256": "c45b75a7639021fff2e444ea7cdbee56c71c22233467766ca30e45a77eaf938e",
+      "decoded_binary_mask_sha256": "c5d3ff9dddf8e6119e709fc846539255ebf69cc47533ed915857c634c17ad87c"
+    },
+    {
+      "views": 34,
+      "raw_voxels": 27387,
+      "observed_voxels": 21547,
+      "observed_boundary_points": 6426,
+      "occupancy_fnv1a64": "76b8858a8f90c52c",
+      "native_apply_and_stats_ms": 1219.691424,
+      "decoded_rgba_sha256": "57fa91aab5ecc71568781fbb88a81db5d7c0143f1803b6af07459398f1b559b2",
+      "decoded_binary_mask_sha256": "c6ca80948c6bb81236f67896141741411076c7d02d72d25fc6853cb1b449cc66"
+    },
+    {
+      "views": 35,
+      "raw_voxels": 27331,
+      "observed_voxels": 21499,
+      "observed_boundary_points": 6417,
+      "occupancy_fnv1a64": "b8c9d8edaa0a6f80",
+      "native_apply_and_stats_ms": 1218.916319,
+      "decoded_rgba_sha256": "1b3d778e983c5c8468fc481b10aef8f0afa5c1c9cdbccca7e7524946284fea77",
+      "decoded_binary_mask_sha256": "20f8b4239a662ab46a555faf025e93d932afc1305aab21b85eedc30fb5891d88"
+    },
+    {
+      "views": 36,
+      "raw_voxels": 27310,
+      "observed_voxels": 21480,
+      "observed_boundary_points": 6415,
+      "occupancy_fnv1a64": "bc1847c8e8264d3f",
+      "native_apply_and_stats_ms": 1227.247309,
+      "decoded_rgba_sha256": "3a6a081d4a3d2d692f95bc5cc7ba1eee67cbe41101fb30fe628bf086764163b4",
+      "decoded_binary_mask_sha256": "71e6e1e90009e3a28c008a95502faa39595c1fd2017333d856cce4bf22db1913"
+    }
+  ],
+  "outputs": {
+    "positions": {
+      "file": "positions.f32le",
+      "bytes": 76980,
+      "sha256": "57550d4e9b47fe8175505f84272b44710c2bd99abd537e3f52edc660a785ecf6"
+    },
+    "normals": {
+      "file": "normals.f32le",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "colors": {
+      "file": "colors.rgba8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "raw_occupancy": {
+      "file": "occupancy.bin",
+      "bytes": 262144,
+      "sha256": "ad2f44206cdb87634a0ef8273cf82173ebbf5fe80d19b31f6b4f4614f3400f40"
+    }
+  },
+  "calibration_asset_sha256": "4633c518f33439015bf350ac3669a21820b5c3fc0754079b16ac12c7130d7531",
+  "input_manifest_sha256": "e9b65a2a3bada2f427fc2717f6a68ef9210192748a6748aabefa400c988d2618",
+  "elapsed_seconds": 45.785,
+  "elapsed_scope": "PNG decode, native calls, statistics, extraction and output writes; not benchmark throughput",
+  "accuracy_scope": "supplied historical data only; no independent 3D accuracy evaluation"
+}

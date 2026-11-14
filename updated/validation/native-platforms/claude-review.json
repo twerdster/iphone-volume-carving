@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-14",
+  "reviewer": "Actual Claude CLI, safe mode, no tools, strict empty MCP configuration",
+  "shared_invocations": "One initial and one focused code review jointly covered both carving repositories; not separate per-repository invocations",
+  "initial_code_review": {
+    "exit_code": 0,
+    "is_error": false,
+    "input_files": 38,
+    "elapsed_seconds": 262.75,
+    "result_sha256": "332ff5741e0731f7dc7640256e8953e55998e0c320045ba86dc15dc135515470",
+    "useful_findings_applied": [
+      "checked UIKit artifact publication and completion/count/hash checks",
+      "desktop stale async response and output clearing fixes",
+      "Android worker ownership across Activity recreation",
+      "native replay close-error checks",
+      "Volume calibration declared as Gradle input"
+    ],
+    "factual_triage": "Rejected an incorrect GLSL ES matrix-constructor finding after checking the primary specification; follow-up includes previously omitted CMake/original-header context"
+  },
+  "focused_code_review": {
+    "exit_code": 0,
+    "is_error": false,
+    "input_files": 59,
+    "elapsed_seconds": 237.16052269935608,
+    "result_sha256": "c1d72945ea2a35e6bdd548514625a489df04d65935d7fbde752978095b91b585",
+    "source_snapshot_still_matches": false,
+    "scope": "static source review of supplied native, UIKit, Android, desktop, CMake and original-header context",
+    "outcome": "No High issues or material regressions identified in fixes; Android completion baseline semantics qualified in docs; minor local-interface limitations retained",
+    "subsequent_bounded_change": "Normalized float RGBA SceneKit display helper, generator header copy and focused helper test added after the59-file review; covered separately by the final 8-file actual follow-up. Native/JNI/desktop source unchanged."
+  },
+  "remaining_scope": [
+    "Android completion records native arrays/counts/FNV; fixed-fixture baseline is checked externally by device validation, unlike UIKit and host replay gates",
+    "Desktop stale-response regression covers the single-tab workflow; concurrent independent browser tabs are outside validated use",
+    "No arbitrary-camera, live SDK, general geometry accuracy or new frontend sanitizer coverage inferred"
+  ],
+  "runtime_coverage_added_by_review": false,
+  "private_review_logs_retained": true,
+  "editorial_review": {
+    "exit_code": 0,
+    "is_error": false,
+    "shared_input_files": 32,
+    "elapsed_seconds": 166.92,
+    "result_sha256": "c1e6e3cfc771f158549a2e97a9431ef4d69245e84ef5ee8ab027b246bfdd1ee5",
+    "scope": "One shared tools-disabled review of both projects documentation and public records, using verified runtime facts; no tools/runtime tests",
+    "useful_qualifications_applied": [
+      "Freehand one-byte-per-cell FNV traversal and OpenCV header dependencies",
+      "earlier offline versus final C-ABI color and sanitizer scope",
+      "Volume reference limited to separate same-rule macOS calculation",
+      "Freehand four component checks distinguished from Volume C-ABI prism regression",
+      "Android external baseline validation semantics and single-tab desktop scope",
+      "coordinate formats, shared schema and dataset attribution clarified"
+    ],
+    "runtime_coverage_added": false
+  },
+  "final_display_color_followup": {
+    "exit_code": 0,
+    "is_error": false,
+    "shared_input_files": 8,
+    "elapsed_seconds": 36.411958499928005,
+    "result_sha256": "fd4932504f2ffa7513a39221c2e8fe626e429950a03f539b6a136f21415058d0",
+    "input_manifest_sha256": "3e0f114578d6825142b0be428876326bca38a2d46bf4df2b8e3f1790d4096023",
+    "scope": "One combined tools-disabled review of the bounded SceneKit display delta in both repos, full affected methods/generators/tests and verified previous-source diff",
+    "outcome": "No material findings. Checked float4 layout, NSData copy/lifetime, saved RGBA preservation, header copy/resolution and test tolerance. Physical color appearance checked separately in new device recordings.",
+    "runtime_coverage_added_by_review": false,
+    "current_eight_file_snapshot_verified": true
+  },
+  "composite_review_coverage": "The 59-file earlier focused snapshot plus the final 8-file bounded display delta cover current authored code reviewed here; unchanged prior files and current 8 hashes checked. Actual 32-record editorial review predates only the small display-test/platform-status additions and final media links; those were verified directly."
+}

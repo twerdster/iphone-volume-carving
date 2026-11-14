@@ -1,0 +1,18 @@
+{
+  "project": "volume",
+  "passed": true,
+  "deliberately_delayed_old_geometry_response": true,
+  "old_run_id": "1794639276877027000",
+  "new_run_id": "1794639278443846000",
+  "old_result_during_new_run_status": 404,
+  "busy_status": 409,
+  "foreign_origin_status": 403,
+  "foreign_host_status": 403,
+  "traversal_status": 404,
+  "stale_response_state": {
+    "ready": false,
+    "loadedRunId": null,
+    "activeRunId": "1794639278443846000"
+  },
+  "page_errors": []
+}

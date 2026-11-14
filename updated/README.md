@@ -1,10 +1,26 @@
 # Silhouette volume carving — updated 2026
 
-![Final observed boundary samples rendered from the 36 calibrated viewpoints](assets/dinosaur-carving.gif)
+| iPhone 12 · native execution | Offline boundary-point rendering · macOS |
+| --- | --- |
+| <img src="assets/ios-native.gif" width="230" alt="Actual iPhone screen recording of the new native reconstruction interface"> | <img src="assets/dinosaur-carving.gif" width="460" alt="Final observed boundary samples rendered from the 36 calibrated viewpoints"> |
+
+The phone runs the new frontend on supplied images and camera matrices; it does
+not capture or estimate poses. Recordings: [iOS](assets/ios-native.mp4) ·
+[Android](assets/android-native.mp4) · [macOS](assets/macos-native.mp4) ·
+[Linux](assets/linux-native.mp4).
+
 
 Silhouettes and calibrated cameras from a real dinosaur sequence drive the recovered C++ carver. Photographs appear only in the rendering. The display excludes voxels whose projections never fall inside any input image; the unfiltered native output is also retained. [MP4](assets/dinosaur-carving.mp4) · [Full-size image](assets/dinosaur-carving.png) · [Point viewer — download and open locally](assets/dinosaur-viewer.html).
 
 This component runs Sergey Kucher and Alex Povichuk’s `Sculptor` voxel-carving code, supervised by Aaron Wetzler. A voxel is a sample in a regular 3D grid. Each supplied silhouette and 3×4 camera matrix removes samples that project into background. The 21 original files under `../source/` are unchanged.
+
+## New native interfaces
+
+The new [iOS, Android, macOS and Linux interfaces](PLATFORMS.md) execute the
+recovered C++ reconstruction on the supplied 36-view fixture, then render its
+computed geometry. They use known camera matrices and do not restore live camera
+capture or the historical SDK. [Build/runtime/capture records](validation/native-platforms/)
+keep executable results separate from recordings and declared platform support.
 
 ## What runs
 
@@ -27,12 +43,12 @@ The three compiled-original tests require clang++ or g++ and skip when neither e
 
 On 2026-11-14, all 16 component tests passed on both macOS and Linux, including the three compiled-original comparisons. They cover bounded synthetic occupancy/mask parity, projection, grid packing, order/idempotence checks, exports and retained vector quirks.
 
-The unchanged C++ `ACCURATE` path replayed all 36 dinosaur silhouettes at 128³ resolution, using Freehand’s rounded `demoP` table rather than the original Oxford calibration files. All 2,097,152 occupancy values matched an independent NumPy projection calculation after every view. The raw result has 27,310 occupied voxels; 5,830 never project inside any image. Excluding those from the separately labeled observed export leaves 21,480 voxels and 6,415 boundary samples (recomputed after filtering, including newly exposed boundaries). Both raw and observed PLY files are included. [Metrics and logs](validation/2026-11-14/).
+The unchanged C++ `ACCURATE` path replayed all 36 dinosaur silhouettes at 128³ resolution, using Freehand’s rounded `demoP` table rather than the original Oxford calibration files. On macOS, all 2,097,152 occupancy values matched a separately written float32 NumPy implementation of the same projection rule after every view. The raw result has 27,310 occupied voxels; 5,830 never project inside any image. Excluding those from the separately labeled observed export leaves 21,480 voxels and 6,415 boundary samples (recomputed after filtering, including newly exposed boundaries). Both raw and observed PLY files are included. [Metrics and logs](validation/2026-11-14/).
 
-The full native replay exited 0 with no AddressSanitizer/UndefinedBehaviorSanitizer reports on both systems; only executed paths were checked. Linux/GCC ASan output was byte-identical to macOS/clang strict output, including mutated masks and final occupancy. Per-view snapshots were checked against the separate float32 reference on macOS. These checks show agreement with the reference on Mac and final-output consistency across the two builds; they do not measure geometric accuracy.
+The full offline harness replay (not the new C-ABI frontends) exited 0 with no AddressSanitizer/UndefinedBehaviorSanitizer reports on both systems; only executed paths were checked. Linux/GCC ASan output was byte-identical to macOS/clang strict output, including mutated masks and final occupancy. These checks show agreement with the reference on Mac and final-output consistency across the two builds; they do not measure geometric accuracy.
 
 ## Limits and credits
 
 The recovered app is incomplete: its Objective-C shell, SDK integration and MarchingCubes implementation are absent. Direct compilation first fails at the missing header. The original out-of-map rule can retain unobserved cells; raw output remains available rather than being silently cleaned. A visual hull cannot recover concavities absent from silhouettes. No held-out-view, physical-capture or reference-surface evaluation was performed.
 
-The input sequence is reused from the separate recovered Freehand project, not recovered captures from this app. Credit: Wolfgang Niem, University of Hannover, via [Oxford VGG’s multi-view data](https://www.robots.ox.ac.uk/~vgg/data/mview/). Existing terms and notices remain; no new dataset or code license is inferred. The earlier Python translation was drafted with Claude Code and completed/tested by Codex. Aaron Wetzler maintains the separately labeled 2026 tooling; original author attribution is preserved.
+The input sequence is reused from the separate recovered Freehand project, not recovered captures from this app. Credit: Wolfgang Niem, University of Hannover, via [Oxford VGG’s multi-view data](https://www.robots.ox.ac.uk/~vgg/data/mview/) and Ben Tordoff’s example bundled in the Freehand archive. Existing terms and notices remain; no new dataset or code license is inferred. The earlier Python translation was drafted with Claude Code and completed/tested by Codex. Aaron Wetzler maintains the separately labeled 2026 tooling; original author attribution is preserved.

@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-14",
+  "platform": "linux",
+  "actual_execution": "Browser Compute button starts native C-ABI executable on the same host, processes all 36 fixture views, then renders its computed geometry",
+  "capture": "actual Xvfb:98 desktop via PIL XCB",
+  "sampled_frames": 32,
+  "frame_timing": "actual sample timestamp differences preserved in concat encoding; source nominal 5 fps, MP4 encoded 10 fps by frame duplication, GIF 5 fps",
+  "source_duration_seconds": 6.407400581042748,
+  "display": "Bounding-box centering/scaling and axis rotation only; saved native coordinate arrays are unchanged",
+  "scope": "fixed recovered dinosaur fixture and supplied cameras; no live capture, pose tracking, general accuracy or performance benchmark",
+  "media": [
+    {
+      "path": "updated/assets/linux-native.mp4",
+      "bytes": 234727,
+      "sha256": "e5667bce859a8b0537f3712dc629686baec8828be7bcf7fe712f00a02612978b"
+    },
+    {
+      "path": "updated/assets/linux-native.gif",
+      "bytes": 360355,
+      "sha256": "c2a1969f5be48e8fc3f8c914963a7ba7b29c97be436cc973a14056b826fd0341"
+    },
+    {
+      "path": "updated/assets/linux-native.png",
+      "bytes": 177860,
+      "sha256": "f4fd39da7300958b227083e7d58990c28681d8cdbae85cc13628725f7de1daaf"
+    }
+  ],
+  "source_frame_sha256": [
+    "1f7cf938b73f0b050cb1fbf3d57a7b49f6aed2d0b474016482484cfbb37cf289",
+    "de07878fe5a6de9217cfe4ce5c52948d3ef540868d76a6977e96ad146a418526",
+    "6533da9896c4a06ee36901561214b490666455e3fe5280ea33f34331ef54d229",
+    "6533da9896c4a06ee36901561214b490666455e3fe5280ea33f34331ef54d229",
+    "1ea15514a283eca0fbd8a03dfffd8152413274798d80b092333c4bf31f7854f2",
+    "d8378e565d0fc1f7c7762137e9e1ec7aa659f2e304cec680d9419ebad6d406a2",
+    "d8378e565d0fc1f7c7762137e9e1ec7aa659f2e304cec680d9419ebad6d406a2",
+    "709efdb546d662d9e84c4e7c6db355a745c7712df375d854db840a840a614444",
+    "b49c53a4bcbc8bea08c5fcbeb899a18d66e7d93dc4d7f46a5533b0da1fe7873c",
+    "1edce2e506b0068e87db84ec89cebe53f091a8dd4c49fbe208ccbbf7175e29e6",
+    "a6f268ffee686cd0a38842ed53b96f335c06e081a22c3e72d4d6403e0209bf38",
+    "7e81886d0beb8fca5a64808a4947a685ce5f1266daec1f4c2861f677ed4728fa",
+    "075d2d288ac66f9cc63788167b988455527d3fa9225fa69ada25f6918bbcd0a2",
+    "fb3cb6b0f6dc606000bf890ad8ac19af544df19d3458994849475277bbc95360",
+    "c6c4a939be415c5ddb7276c0c1ba44c22710728dc15d004b9df72a48a51a2f94",
+    "88293c8b9e3df4344b938f95700c429ae247e22a5b45be0d5724c445743f9979",
+    "e805fdd8a64d420a773f4732bce0e41547548161440a0cc0e40c97c7be1fed16",
+    "d086b6ec233da86bf111016b5f80ffdf87a4acdc09c603cae691241ac57f8691",
+    "08471831cd0e2d95d34bc7f73784b1990eb0b211322358f56e5dccfdde7be6bb",
+    "b594d7b6d024e81679399a7a2edd50ffda47ad5da68910c5a9d881e39a77c53a",
+    "4675687cc05768a5ece2b9252faaca26aaceac6afd15103aed00c932357430fd",
+    "6cc8a80a7d1b7a93f8730a433ef69b3366606ccbbe1721d0c57f433f788c5175",
+    "c17d31e7ec76bc578423474883c7a435f6d96686c7ed22cac37c58c6b16ee663",
+    "4a2f9b9a219e814d8e73052344831c89f42dc8db123e527bbfdcb87ec0cccd05",
+    "2815bb35fe1aba9bf99babc599312d20e4766a39feddfda8da391ba352e42767",
+    "1d1ff513dbffa8962cf6c270f71d6aa1047682bffd0e1de4365227ee6c253d7a",
+    "49fce786fbce549ee615aae7bdbdbac28793dfa7862e637f2cb73b1af876fb65",
+    "34b830255bf627cc5bc0201d6be7d48b785d836835a7a8e133283a571035247e",
+    "6fd06f9c250a4b07b375b2fbc498d7fbc519b281637d71f6569adccc3c1ce514",
+    "1d0837aabcb43ebb2416ed64862030344addb372cde80504c1e581a5a8f668f3",
+    "14b21666c68f7ba482b4e203564ccc880ef28cc88df3163196611eb05f956251",
+    "14b21666c68f7ba482b4e203564ccc880ef28cc88df3163196611eb05f956251"
+  ],
+  "browser_checks": {
+    "rendered": 6415,
+    "status": "Native computation complete; drag the computed result to rotate.",
+    "metrics": "27,310 raw voxels \u00b7 21,480 observed \u00b7 6,415 boundary samples \u00b7 1.50 s measured run",
+    "glError": 0,
+    "overflow": false,
+    "dragChangesYaw": true,
+    "errors": [],
+    "externalRequests": [],
+    "browser": "141.0.7390.76",
+    "actualCapture": "{\"project\": \"volume\", \"frames\": 32, \"seconds\": 6.207400581042748, \"capture\": \"actual Xvfb:98 desktop via PIL XCB\", \"size\": [1280, 800]}",
+    "hostPlatform": "Linux X11 :98 / software WebGL display; native C++ reconstruction"
+  },
+  "completion": {
+    "native_views": 36,
+    "raw_voxels": 27310,
+    "observed_voxels": 21480,
+    "triangles": 0,
+    "rendered_vertices": 6415,
+    "occupancy_fnv1a64": "bc1847c8e8264d3f"
+  },
+  "final_frame_hold_seconds": 0.2,
+  "duration_note": "Source duration includes a final0.2-second hold after the last timestamp; the raw capture reports first-to-last timestamp difference."
+}

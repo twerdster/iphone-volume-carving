@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-14",
+  "platform": "macos",
+  "actual_execution": "Browser Compute button starts native C-ABI executable on the same host, processes all 36 fixture views, then renders its computed geometry",
+  "capture": "headed Chrome viewport on macOS via timed Playwright screenshots",
+  "sampled_frames": 27,
+  "frame_timing": "actual sample timestamp differences preserved in concat encoding; source nominal 5 fps, MP4 encoded 10 fps by frame duplication, GIF 5 fps",
+  "source_duration_seconds": 5.429,
+  "display": "Bounding-box centering/scaling and axis rotation only; saved native coordinate arrays are unchanged",
+  "scope": "fixed recovered dinosaur fixture and supplied cameras; no live capture, pose tracking, general accuracy or performance benchmark",
+  "media": [
+    {
+      "path": "updated/assets/macos-native.mp4",
+      "bytes": 187553,
+      "sha256": "70ef66cb8af4ca6087ce99e1ede8551b4395a370d3a2d8956233b5f618574558"
+    },
+    {
+      "path": "updated/assets/macos-native.gif",
+      "bytes": 358968,
+      "sha256": "25a0ceb848a688bb8d92f9b96e730becf824085fe60eb43813fdfd2708ca0e19"
+    },
+    {
+      "path": "updated/assets/macos-native.png",
+      "bytes": 189248,
+      "sha256": "bf4b9d5a79124fa577bdd97aaf1dfcebafe5f4071064958e55f9694960e90e5f"
+    }
+  ],
+  "source_frame_sha256": [
+    "a303a808d6b2e0c77b0f7d2f6adfb0299a5ae087a2c625e56a456569f65bd704",
+    "f6418aa20dcae149f1939031177bd434b0ee6553b45f31eb6a00535de9ed078d",
+    "c5a2baff4e1ec6b2e180dc1b2d4a8b318ff339e939e41f912e059be0bb3998f5",
+    "c5a2baff4e1ec6b2e180dc1b2d4a8b318ff339e939e41f912e059be0bb3998f5",
+    "2aa45dde849163f70a8cce53b85b8cb345a184cdfeeedf853c002853628f9e31",
+    "e21cf4c6695c7e7f3ff139948a3fadf2189011ab5513f83eded56c114e67b07a",
+    "e21cf4c6695c7e7f3ff139948a3fadf2189011ab5513f83eded56c114e67b07a",
+    "4401bcc44948be9798c8dfac8ffef9a142198eea17d7d5f8fd5bd2f11d762851",
+    "150bb756cdfc4d5be6a06a161a50119dcfdbfbfe9376695a78ce07841d1b52a3",
+    "59325a8d76badc31960ed2c225419f771e5c88e4a3c4dedf08dd9d03d6ee61de",
+    "d5d6a9aaea6ae438451edeee907c46c26089758938d447621b94df6ad4338ca8",
+    "b6766cb7b7ce9e8b5726f4cdf222b76f6f62c25a0ec5fefa1322968b201b74b7",
+    "bf1e7fb54cf4e19c413f7e1bb3b6ce37451ad3bdc6340ddc1f6a78f679c57313",
+    "38fb974f0759cc4fda2c09b3eabba15f849e8bd05e6d3aafb36f2bab090ca030",
+    "1798f2611b798eab9c775894d25440a63fd89a62bdfa7fe54da61aea9e2c0b0e",
+    "393b3fea6d9cfafbc0e1f6669165ba3d456e1f27197ee31bf7a1ebc680321ffe",
+    "190faf71c9e93c153044ec484c626de4a70b3a5fc9fba58e90e4edbb7a84ec35",
+    "b94455ea83eb663050f98390b58cc83c568b31379c7ef5cf9c53d109a0cf615e",
+    "f8e083b9189341c3ad528b38c04ebb7d85b0c4c086da19e77739b419fee2e962",
+    "19b06ba8933843e05816efdc99e344e3f6d76fcecafdb5b4f4566914c9fcc16e",
+    "66808fbced189bd14a8bfb22868e976e33882addad9f90f804f132fe75714f12",
+    "a3b65413228f651f9da91e2f578ee22f688e0e36adf40ff80aa883726e179ed0",
+    "4673510d43c4e719ab10b2f85f03c847692d639545911aaa174142d82e197f5d",
+    "e8288d1cc7b11df0e3c6f5202387466675b4014baa6996e1a66c7ad3cf4ae337",
+    "da458aa7b2ec4c0e94a2ab5a09bb85d6efcbc3a37ddded565431f7f55c84b3d7",
+    "aa5a7bf45d68805150e4791e89b79212167fe170b7c6807e8d4c8ab7ed0562dd",
+    "710426081f98629c0ad2e06b124cbeec914882d895fa018f503e90fe9d5e37e0"
+  ],
+  "browser_checks": {
+    "rendered": 6415,
+    "positionsReady": true,
+    "status": "Native computation complete; drag the computed result to rotate.",
+    "metrics": "27,310 raw voxels \u00b7 21,480 observed \u00b7 6,415 boundary samples \u00b7 1.41 s measured run",
+    "glError": 0,
+    "overflow": false,
+    "dragChangesYaw": true,
+    "errors": [],
+    "externalRequests": [],
+    "browser": "157.0.8103.51",
+    "hostPlatform": "darwin"
+  },
+  "completion": {
+    "native_views": 36,
+    "raw_voxels": 27310,
+    "observed_voxels": 21480,
+    "triangles": 0,
+    "rendered_vertices": 6415,
+    "occupancy_fnv1a64": "bc1847c8e8264d3f"
+  },
+  "final_frame_hold_seconds": 0.2,
+  "duration_note": "Source duration includes a final0.2-second hold after the last timestamp; the raw capture reports first-to-last timestamp difference."
+}

@@ -1,0 +1,12 @@
+<resources>
+<item name="run" type="id" />
+<item name="reset_view" type="id" />
+<item name="auto_rotate" type="id" />
+<item name="progress" type="id" />
+<item name="status" type="id" />
+<item name="counts" type="id" />
+<item name="photo" type="id" />
+<item name="mask" type="id" />
+<item name="geometry" type="id" />
+<item name="credits" type="id" />
+</resources>

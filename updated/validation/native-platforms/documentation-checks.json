@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-14",
+  "renderer": "GitHub Markdown API mode=gfm, rendered HTML inspected in Chrome157",
+  "page_checks": [
+    {
+      "repo": "iphone-volume-carving",
+      "doc": "README.md",
+      "headings": [
+        "Silhouette volume carving \u2014 updated 2026",
+        "New native interfaces",
+        "What runs",
+        "Run",
+        "Verified output",
+        "Limits and credits"
+      ],
+      "images": [
+        {
+          "src": "assets/ios-native.gif",
+          "loaded": true
+        },
+        {
+          "src": "assets/dinosaur-carving.gif",
+          "loaded": true
+        }
+      ],
+      "codeBlocks": 1,
+      "overflow": false,
+      "pageErrors": [],
+      "githubGFMRendered": true
+    },
+    {
+      "repo": "iphone-volume-carving",
+      "doc": "PLATFORMS.md",
+      "headings": [
+        "Native replay interfaces",
+        "Tested execution and recordings",
+        "macOS and Linux",
+        "iOS",
+        "Android and coordinate formats"
+      ],
+      "images": [],
+      "codeBlocks": 3,
+      "overflow": false,
+      "pageErrors": [],
+      "githubGFMRendered": true
+    }
+  ],
+  "relative_links": "All links in changed README, PLATFORMS and Android README resolve locally",
+  "source_preservation": "Root README and original source match HEAD; Freehand submodule remains881f5a8f02d9282d502d4547da0ecb34d5c0f00c",
+  "media_checks": "Final iOS/Android/macOS/Linux GIF+MP4 files decoded fully with FFmpeg; All media hash/size records match their files. GIFs < 2,000,000 bytes and MP4s < 10,000,000 bytes. Physical iOS/Android completed result/poster frames and iOS first GIF/MP4 frames inspected.",
+  "runtime_claims": "Native result records and artifact hashes are separate from capture provenance and static reviews",
+  "render_visual_inspection": "Final GFM README iOS/offline GIF table, all four movie links, guide commands/headings/images inspected in Chrome; no overflow or page errors.",
+  "final_color_fix": "Final physical iOS capture shows visible Freehand vertex colors / Volume teal points; no OS/personal content in sampled 3/4/6/10/16/24-second crop. First encoded frames show the current project; supplied-input compute then resulting geometry is visible."
+}
