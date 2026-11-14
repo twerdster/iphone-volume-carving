@@ -2,6 +2,12 @@
 
 Read SUMMARY.md, then SKILL.md, the reference README and updated documentation. Current results: 2026-11-14.
 
+## Updated-work navigation (2026-11-14)
+
+Aaron authorized a top-of-page `New!` badge and “Updated and ported for modern hardware” link in the root README. Both lead to the corresponding heading in `updated/README.md`, which now opens with a brief description of the actual port, repairs or reimplementation and its limits. An italic line marks the following content as the historical reference. The historical root reference body remains unchanged; current implementation details stay under `updated/`.
+
+This documentation change does not alter source, submodule pins, media or recorded validation. Earlier root-README byte-identity statements and hashes apply to their recorded baseline; current preservation checks remove only the authorized navigation block before comparing the historical body.
+
 ## Purpose and preservation
 
 Silhouette visual-hull carving by Sergey Kucher and Alex Povichuk, supervised by Aaron Wetzler. All 21 recovered source files remain unchanged. Preserve their notices/credits. The root README is the project reference; new work belongs under updated/.

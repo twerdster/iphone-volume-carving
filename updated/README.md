@@ -1,5 +1,9 @@
 # Silhouette volume carving — updated 2026
 
+## Updated and ported for modern hardware
+
+The recovered C++ carving core runs on macOS and Linux through a compatibility harness, with no numerical carving change for the tested path. New iOS, Android and desktop interfaces replay supplied silhouettes and camera matrices; separate tooling exports boundary points and optionally excludes never-observed voxels. The historical camera/tracking shell and mesh extraction remain absent.
+
 | iPhone 12 · native execution | Offline boundary-point rendering · macOS |
 | --- | --- |
 | <img src="assets/ios-native.gif" width="230" alt="Actual iPhone screen recording of the new native reconstruction interface"> | <img src="assets/dinosaur-carving.gif" width="460" alt="Final observed boundary samples rendered from the 36 calibrated viewpoints"> |
