@@ -8,6 +8,8 @@ Aaron explicitly authorized the root README’s local `New!` badge and exact “
 
 This navigation addition is the authorized exception to older root-README preservation instructions below. Verify the historical body after removing only that block, preserve source hashes/pins and leave historical validation hashes attached to their original freezes. Documentation-only navigation edits do not add runtime coverage or require a package rebuild.
 
+Aaron also authorized recording new student responses on 15 November 2026. The existing root README permission paragraph now records Alex Povichuk's 13 November and Sergey Kucher's 14 November individual permissions. This narrow factual update is a second authorized exception to root-reference preservation; it changes no license, source bytes or runtime evidence. Compare the remainder of the root README against its preceding commit when checking this update.
+
 ## Preservation and workflow
 
 Keep the root README unchanged unless Aaron explicitly requests edits there. Preserve original source bytes/pins, author/student/third-party attribution, notices and permission scope. Put new code, adapters, behavioral changes, guides and result media under updated/. Never imply that a declaration-only header or headless core is a restored historical app. See the running guide for current commands/dependencies rather than duplicating them here.

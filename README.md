@@ -48,7 +48,7 @@ The complete app requires its historical iOS integration, OpenGL ES, compatible 
 
 The Python translation was drafted with Claude Code and completed/reviewed/tested with Codex for Aaron Wetzler in 2026. The original files, student credits and third-party notices are preserved. No explicit top-level code license was found, and no blanket license is added for original or derived work. Authors can open an issue to contribute updates, correct attribution or request removal.
 
-On 2026-11-13, Alex Povichuk gave Aaron Wetzler permission to use the project code. This records Alex Povichuk's response only; no repository-wide license is added. The recovered original and separately labeled Python component retain their existing attribution and notices.
+Alex Povichuk gave Aaron Wetzler permission to use the project code on 13 November 2026; Sergey Kucher gave Aaron Wetzler permission to use the project on 14 November 2026. These are individual author responses; no repository-wide license is added. The recovered original and separately labeled Python component retain their existing attribution and notices.
 
 ## Links
 
