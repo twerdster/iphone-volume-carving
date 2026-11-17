@@ -41,7 +41,7 @@
     "lighting": "height color only; no native texture",
     "saved_arrays": "unchanged raw native coordinates"
   },
-  "immutable_apk_copy": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/dist/volume-updated-final.apk",
+  "immutable_apk_copy": "/path/to/work/project-revivals-2026-11-14/volume-platforms/android/dist/volume-updated-final.apk",
   "packaged_libraries": {
     "lib/arm64-v8a/libc++_shared.so": {
       "bytes": 1292904,
@@ -527,10 +527,10 @@
     "No independent 3D geometric accuracy or live pose tracking claim."
   ],
   "maintainer_local": {
-    "private_work_root": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android",
-    "apk": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/build/app/outputs/apk/debug/app-debug.apk",
-    "build_log": "/Users/aaron/.codex/project-revivals-2026-11-14/volume-platforms/android/build.log",
-    "dataset_path": "/Users/aaron/repos/student-projects/freehand-voxel-carving/source/PointCloudSample/dinosaur",
+    "private_work_root": "/path/to/work/project-revivals-2026-11-14/volume-platforms/android",
+    "apk": "/path/to/work/project-revivals-2026-11-14/volume-platforms/android/build/app/outputs/apk/debug/app-debug.apk",
+    "build_log": "/path/to/work/project-revivals-2026-11-14/volume-platforms/android/build.log",
+    "dataset_path": "/path/to/checkouts/freehand-voxel-carving/source/PointCloudSample/dinosaur",
     "dependencies": "Read-only existing cutout-runtime SDK/NDK/Gradle; no OpenCV dependency or global installation."
   }
 }

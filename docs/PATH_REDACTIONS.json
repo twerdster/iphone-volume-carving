@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-17",
+  "scope": "Generalize machine-specific paths in public setup/context and historical diagnostic records. Original code, source pins, executable artifacts and numerical results are unchanged.",
+  "evidence_policy": "Original raw text is retained privately. Earlier immutable hashes continue to identify pre-redaction evidence bytes; the published hashes below identify their path-generalized counterparts. No validation was rerun or invented.",
+  "files": [
+    {
+      "file": "SUMMARY.md",
+      "original_sha256": "827fcd9ed2cd8826899746bc0b255e24738f52f9ad780151deb44079f5e47330",
+      "published_sha256": "de928f17cac9f5983bb0f0b1b76d5b0df97771be7a2971f2c54ef135a496c036",
+      "scope": "Personal workstation/build/data prefixes generalized; numerical values, operator diagnostics and failure outcomes unchanged."
+    },
+    {
+      "file": "updated/android/VALIDATION.json",
+      "original_sha256": "059d3059a9bc91cb9ceeeda3ba664760c07566620e19ac550ff69704f1576484",
+      "published_sha256": "ee7feffecb1adce45857d910526e7f02b918500296d2cb803bc8b8bf5ca02dcf",
+      "scope": "Personal workstation/build/data prefixes generalized; numerical values, operator diagnostics and failure outcomes unchanged."
+    },
+    {
+      "file": "updated/validation/2026-11-14/original-build.txt",
+      "original_sha256": "1558616f237c3e27910595682831695c8f19aefa9c1abd80d39bf182175b362b",
+      "published_sha256": "764848cae3ffea3ad2741ccf6ef63bb1e99558c246532fa71f4f809106e9f1dd",
+      "scope": "Personal workstation/build/data prefixes generalized; numerical values, operator diagnostics and failure outcomes unchanged."
+    }
+  ]
+}

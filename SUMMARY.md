@@ -26,7 +26,7 @@ Direct compilation fails at missing MarchingCubes.h. The harness placeholder doe
 
 See updated/README.md and updated/RUNNING_2026.md for commands and dependencies. updated/VALIDATION.json retains current checks and the earlier notebook record; updated/validation/2026-11-14/ contains environment details, metrics, hashes and logs. Six notebook code cells executed in Jupyter on 2026-11-12 were not rerun here.
 
-Media, PLY samples and a local interactive viewer live under updated/assets/. Preserve GIF <2,000,000 bytes and MP4 <10,000,000 bytes; playback rate is not throughput. Bulk data/intermediates: /Volumes/AgentSSD/agent-work/project-revivals-2026-11-14/volume-carving. Recheck SSD mount/space/write access before large writes; keep builds/environments on native filesystems. Private host/build paths and full logs are recorded in the task handoff.
+Media, PLY samples and a local interactive viewer live under updated/assets/. Preserve GIF <2,000,000 bytes and MP4 <10,000,000 bytes; playback rate is not throughput. Store bulk data/intermediates in a user-selected writable data directory with enough free space; keep builds/environments on a filesystem with native permissions and link support. Workstation-specific paths and full raw logs belong in private run records.
 
 Alex Povichuk gave Aaron permission to use the project code on 13 November 2026; Sergey Kucher also gave permission to use the project on 14 November 2026. The 15 November documentation update records both individual responses in the existing root README permission paragraph. It adds no repository-wide license or new runtime evidence. Preserve correspondence privately, original attribution and existing terms. Dinosaur data is credited to Wolfgang Niem, Hannover, via Oxford VGG and Ben Tordoff’s example in the Freehand archive.
 
@@ -97,3 +97,7 @@ The browser viewer compares the actual exported raw and observed voxel-boundary 
 An actual tools-disabled Claude editorial rewrite completed for this project on 2026-11-17. Factual suggestions were checked against code and recorded results; saved playback and synthetic inputs remain labeled. Private prompts and actual responses stay in the task review directory. Review adds no runtime evidence.
 
 The completed browser checks cover meaningful project-specific controls, asset loading and desktop/phone viewport layout with no uncaught JavaScript errors, failed assets or horizontal overflow. `demo/validation.json` records scope and exact prior-document hashes. A completed follow-up Claude review and focused delta review informed checked fixes. No native algorithm or recovered source changed.
+
+## Generic public paths (2026-11-17)
+
+Public maintainer context and validation excerpts now use generic build/data locations. docs/PATH_REDACTIONS.json records before/after hashes for incidental path substitutions; unmodified raw evidence is retained privately. Prior frozen hashes still refer to the earlier raw text. Original source, executable inputs/outputs, diagnostic outcomes and numerical results are unchanged. This text-only cleanup adds no runtime coverage and does not change the deployed demo assets.
