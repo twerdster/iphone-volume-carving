@@ -1,0 +1,27 @@
+{
+  "scope": "Saved-output interactive display only; no reconstruction in browser",
+  "datasets": [
+    {
+      "original_count": 6415,
+      "display_count": 6415,
+      "sampling_stride": 1,
+      "source_sha256": "b6a3c6f44bbab5b9cd2497569b9a5efce423d0444635d96efce1c287cbc7afba",
+      "name": "Observed-volume boundary",
+      "note": "6,415 boundary samples from 21,480 observed voxels; not a mesh.",
+      "source": "updated/assets/dinosaur-voxels-observed.ply",
+      "display_axes": "dinosaur",
+      "display_transform": "X,Y,Z reordered as Y,-Z,-X for display only; source samples unchanged"
+    },
+    {
+      "original_count": 8943,
+      "display_count": 8943,
+      "sampling_stride": 1,
+      "source_sha256": "7847a501454fb5e0d88527a5323f59f1ba682df21a2ce54bff40bb6786b930c5",
+      "name": "Raw-volume boundary",
+      "note": "Raw occupancy includes 5,830 voxels that never project inside any image.",
+      "source": "updated/assets/dinosaur-voxels-raw.ply",
+      "display_axes": "dinosaur",
+      "display_transform": "X,Y,Z reordered as Y,-Z,-X for display only; source samples unchanged"
+    }
+  ]
+}

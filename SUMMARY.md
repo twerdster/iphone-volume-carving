@@ -87,3 +87,13 @@ recordings visibly show colored Freehand geometry/teal Volume points. The bounde
 separate actual static invocation after the earlier 59-file review. See
 updated/validation/native-platforms/platform-status.json for current artifact,
 runtime and capture links. Preserve the existing SDK/live-capture limitations.
+
+## Current concise entrypoint and interactive demo (2026-11-17)
+
+Aaron explicitly requested concise, natural README descriptions and a meaningful interactive Updated demo for every project. That authorization supersedes older root-README preservation instructions for this change. The preceding root README remains byte-exact in `ORIGINAL_PROJECT_REFERENCE.md`; the preceding updated entrypoint remains byte-exact in `updated/DETAILS.md`. Original source, pins, numerical implementations, existing media and historical validation records are unchanged.
+
+The browser viewer compares the actual exported raw and observed voxel-boundary samples. It is a display of completed reconstruction, with orbit, slice and color controls. The native fixture applications execute the unchanged carver; this browser viewer does not reconstruct or supply the missing meshing implementation. The public page is https://twerdster.github.io/iphone-volume-carving/ and static assets live in `demo/`. GitHub Pages uploads only that directory through `.github/workflows/demo-pages.yml`. Local use is `python3 -m http.server 8000 --directory demo`. `demo/provenance.json` binds display data to existing outputs. Browser checks cover interaction, loading and layout, not new native computation, hardware operation or accuracy.
+
+An actual tools-disabled Claude editorial rewrite completed for this project on 2026-11-17. Factual suggestions were checked against code and recorded results; saved playback and synthetic inputs remain labeled. Private prompts and actual responses stay in the task review directory. Review adds no runtime evidence.
+
+The completed browser checks cover meaningful project-specific controls, asset loading and desktop/phone viewport layout with no uncaught JavaScript errors, failed assets or horizontal overflow. `demo/validation.json` records scope and exact prior-document hashes. A completed follow-up Claude review and focused delta review informed checked fixes. No native algorithm or recovered source changed.
